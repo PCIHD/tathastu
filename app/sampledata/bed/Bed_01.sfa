@@ -114,7 +114,7 @@
     file: 'sampledata/bed/Bed_01.obj',
     name: 'Bed_01',
     recenter: 'root',
-    scale: 0.010062599999999999,
+    scale: 0.080062599999999999,
   },
   version: '0.54:2',
 }
