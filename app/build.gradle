@@ -58,3 +58,8 @@ sceneform.asset('sampledata/dining table/dining_table.obj',
         'default',
         'sampledata/dining table/dining_table.sfa',
         'src/main/assets/dining_table')
+
+sceneform.asset('sampledata/Expensive_sofa/expensive_sofa.obj',
+        'default',
+        'sampledata/Expensive_sofa/expensive_sofa.sfa',
+        'src/main/assets/expensive_sofa')

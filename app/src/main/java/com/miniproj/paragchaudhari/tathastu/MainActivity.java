@@ -69,14 +69,23 @@ public class MainActivity extends AppCompatActivity {
         });
         gallery.addView(computerTable);
 
-        ImageView diningTable = new ImageView(this);
-        computerTable.setImageResource(R.drawable.dining_table);
-        computerTable.setContentDescription("Dining Table");
-        computerTable.setOnClickListener(view -> {
-            selectedObject = Uri.parse("dining_table.sfb");
-        });
+      ImageView diningTable = new ImageView(this);
+      diningTable.setImageResource(R.drawable.dining_table);
+      diningTable.setContentDescription("Dining table");
+      diningTable.setOnClickListener(view -> {
+          selectedObject = Uri.parse("dining_table.sfb");
+
+      });
         gallery.addView(diningTable);
 
+        ImageView expensive_sofa = new ImageView(this);
+        expensive_sofa.setImageResource(R.drawable.expensive_sofa);
+        expensive_sofa.setContentDescription("Expensive Sofa");
+        expensive_sofa.setOnClickListener(view -> {
+            selectedObject = Uri.parse("expensive_sofa.sfb");
+
+        });
+        gallery.addView(expensive_sofa);
 
 
     }
