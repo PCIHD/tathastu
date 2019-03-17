@@ -35,10 +35,6 @@ dependencies {
 }
 
 
-sceneform.asset('sampledata/couch/model.obj',
-        'default',
-        'sampledata/couch/model.sfa',
-        'src/main/assets/model')
 
 sceneform.asset('sampledata/bed/Bed_01.obj',
         'default',
@@ -46,13 +42,11 @@ sceneform.asset('sampledata/bed/Bed_01.obj',
         'src/main/assets/Bed_01')
 
 
-sceneform.asset('sampledata/computer table/computer_table.obj',
+
+sceneform.asset('sampledata/couch/model.obj',
         'default',
-        'sampledata/computer table/computer_table.sfa',
-        'src/main/assets/computer_table')
-
-
-
+        'sampledata/couch/model.sfa',
+        'src/main/assets/model')
 
 sceneform.asset('sampledata/dining table/dining_table.obj',
         'default',
@@ -63,3 +57,10 @@ sceneform.asset('sampledata/Expensive_sofa/expensive_sofa.obj',
         'default',
         'sampledata/Expensive_sofa/expensive_sofa.sfa',
         'src/main/assets/expensive_sofa')
+
+
+
+sceneform.asset('sampledata/computer table/computer_table.obj',
+        'default',
+        'sampledata/computer table/computer_table.sfa',
+        'src/main/assets/computer_table')

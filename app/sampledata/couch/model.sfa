@@ -114,6 +114,7 @@
     file: 'sampledata/couch/model.obj',
     name: 'model',
     recenter: 'root',
+    scale: 1.2,
   },
   version: '0.54:2',
 }

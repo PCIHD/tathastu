@@ -89,7 +89,7 @@
     file: 'sampledata/Expensive_sofa/expensive_sofa.obj',
     name: 'expensive_sofa',
     recenter: 'root',
-    scale: 0.0072037000000000001,
+    scale: 0.0042037000000000001,
   },
   version: '0.54:2',
 }
