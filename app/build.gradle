@@ -44,3 +44,17 @@ sceneform.asset('sampledata/bed/Bed_01.obj',
         'default',
         'sampledata/bed/Bed_01.sfa',
         'src/main/assets/Bed_01')
+
+
+sceneform.asset('sampledata/computer table/computer_table.obj',
+        'default',
+        'sampledata/computer table/computer_table.sfa',
+        'src/main/assets/computer_table')
+
+
+
+
+sceneform.asset('sampledata/dining table/dining_table.obj',
+        'default',
+        'sampledata/dining table/dining_table.sfa',
+        'src/main/assets/dining_table')
