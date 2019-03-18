@@ -1,6 +1,7 @@
 package com.miniproj.paragchaudhari.tathastu;
 
 import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +22,7 @@ import com.google.ar.sceneform.ux.TransformableNode;
 import java.nio.BufferUnderflowException;
 
 public class ArActivity extends AppCompatActivity {
-    private Button button2;
+    private ImageView button2;
     private ArFragment fragment;
     private Uri selectedObject;
 
@@ -29,7 +30,7 @@ public class ArActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ar_activity);
-        button2 = (Button) findViewById(R.id.button2);
+        button2 = (ImageView) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
