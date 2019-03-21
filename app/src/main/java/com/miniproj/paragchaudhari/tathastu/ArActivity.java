@@ -12,8 +12,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.google.ar.core.Anchor;
+import com.google.ar.core.HitResult;
 import com.google.ar.core.Plane;
 import com.google.ar.sceneform.AnchorNode;
+import com.google.ar.sceneform.HitTestResult;
+import com.google.ar.sceneform.Node;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.Renderable;
 import com.google.ar.sceneform.ux.ArFragment;
@@ -25,6 +28,7 @@ public class ArActivity extends AppCompatActivity {
     private ImageView button2;
     private ArFragment fragment;
     private Uri selectedObject;
+    private Button clear_object_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +49,31 @@ public class ArActivity extends AppCompatActivity {
                         return;
 
                     }
+                    if(selectedObject == null)
+                    {
+
+                    }
                     Anchor anchor = hitResult.createAnchor();
                     placeObject(fragment, anchor, selectedObject);
 
                 })
         );
+        clear_object_button = (Button) findViewById(R.id.__arcore_cancelButton);
+        clear_object_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CLEARSCENE(null);
+            }
+
+
+        });
+
 
     }
-
+    private void CLEARSCENE(Anchor anchor){
+        if(anchor !=null)
+        anchor.detach();
+    }
     private void InitializeGallery() {
         LinearLayout gallery = findViewById(R.id.gallery_layout);
 
