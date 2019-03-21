@@ -1,28 +1,28 @@
 package com.miniproj.paragchaudhari.tathastu;
 
 import android.content.Intent;
-import android.media.Image;
+
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.google.ar.core.Anchor;
-import com.google.ar.core.HitResult;
+
 import com.google.ar.core.Plane;
 import com.google.ar.sceneform.AnchorNode;
-import com.google.ar.sceneform.HitTestResult;
-import com.google.ar.sceneform.Node;
+
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.Renderable;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
 
-import java.nio.BufferUnderflowException;
+
 
 public class ArActivity extends AppCompatActivity {
     private ImageView button2;
@@ -58,15 +58,9 @@ public class ArActivity extends AppCompatActivity {
 
                 })
         );
-        clear_object_button = (Button) findViewById(R.id.__arcore_cancelButton);
-        clear_object_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CLEARSCENE(null);
-            }
 
+        clear_object_button = (Button) findViewById(R.id.ar_clear_button);
 
-        });
 
 
     }
