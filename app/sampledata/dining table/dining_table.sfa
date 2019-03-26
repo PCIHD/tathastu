@@ -89,7 +89,7 @@
     file: 'sampledata/dining table/dining_table.obj',
     name: 'dining_table',
     recenter: 'root',
-    scale: 0.09,
+    scale: 0.009,
   },
   version: '0.54:2',
 }

@@ -89,7 +89,7 @@
     file: 'sampledata/computer table/computer_table.obj',
     name: 'computer_table',
     recenter: 'root',
-    scale: 0.000086070000000000001,
+    scale: 0.0086070000000000001,
   },
   version: '0.54:2',
 }

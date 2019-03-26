@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,7 +19,9 @@ import com.google.ar.core.Anchor;
 import com.google.ar.core.Plane;
 import com.google.ar.sceneform.AnchorNode;
 
+import com.google.ar.sceneform.HitTestResult;
 import com.google.ar.sceneform.Node;
+import com.google.ar.sceneform.Scene;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.Renderable;
 import com.google.ar.sceneform.rendering.Texture;
@@ -34,7 +37,7 @@ public class ArActivity extends AppCompatActivity {
     private ArFragment fragment;
     private Uri selectedObject;
     private Button clear_object_button;
-
+    AnchorNode anchorNode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,8 +58,7 @@ public class ArActivity extends AppCompatActivity {
                         return;
 
                     }
-                    if(selectedObject == null)
-                    {
+                    if (selectedObject == null) {
 
                     }
                     Anchor anchor = hitResult.createAnchor();
@@ -66,11 +68,29 @@ public class ArActivity extends AppCompatActivity {
         );
 
         clear_object_button = (Button) findViewById(R.id.ar_clear_button);
-        TransformableNode node;
-1
-
+        clear_object_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Delete_node(fragment);
+            }
+        });
 
     }
+     private void Delete_node(ArFragment fragment){
+            fragment.getArSceneView().getScene().addOnPeekTouchListener(new Scene.OnPeekTouchListener() {
+                @Override
+                public void onPeekTouch(HitTestResult hitTestResult, MotionEvent motionEvent) {
+                    if(hitTestResult.getNode()!=null) {
+                        Node hitnode = hitTestResult.getNode();
+                        hitnode.setParent(null);
+
+                    }
+                }
+            });
+        }
+
+
+
     private void CLEARSCENE(Anchor anchor){
         if(anchor !=null)
         anchor.detach();
