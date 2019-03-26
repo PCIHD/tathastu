@@ -7,6 +7,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -17,11 +18,15 @@ import com.google.ar.core.Anchor;
 import com.google.ar.core.Plane;
 import com.google.ar.sceneform.AnchorNode;
 
+import com.google.ar.sceneform.Node;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.Renderable;
+import com.google.ar.sceneform.rendering.Texture;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
 
+import static com.google.ar.sceneform.rendering.PlaneRenderer.MATERIAL_TEXTURE;
+import static com.google.ar.sceneform.rendering.PlaneRenderer.MATERIAL_UV_SCALE;
 
 
 public class ArActivity extends AppCompatActivity {
@@ -42,6 +47,7 @@ public class ArActivity extends AppCompatActivity {
             }
         });
         fragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
+        setPlaneTexture("lines.png");
         InitializeGallery();
         fragment.setOnTapArPlaneListener(
                 ((hitResult, plane, motionEvent) -> {
@@ -60,7 +66,8 @@ public class ArActivity extends AppCompatActivity {
         );
 
         clear_object_button = (Button) findViewById(R.id.ar_clear_button);
-
+        TransformableNode node;
+1
 
 
     }
@@ -147,4 +154,33 @@ public class ArActivity extends AppCompatActivity {
         startActivity(mainactivity);
     }
 
+
+    private void setPlaneTexture(String texturePath) {
+
+        Texture.Sampler sampler = Texture.Sampler.builder()
+                .setMinFilter(Texture.Sampler.MinFilter.LINEAR_MIPMAP_LINEAR)
+                .setMagFilter(Texture.Sampler.MagFilter.LINEAR)
+                .setWrapModeR(Texture.Sampler.WrapMode.REPEAT)
+                .setWrapModeS(Texture.Sampler.WrapMode.REPEAT)
+                .setWrapModeT(Texture.Sampler.WrapMode.REPEAT)
+                .build();
+
+        Texture.builder().setSource(() -> getAssets().open(texturePath))
+                .setSampler(sampler)
+                .build().thenAccept((texture) -> {
+            fragment.getArSceneView().getPlaneRenderer().getMaterial()
+                    .thenAccept((material) -> {
+                        material.setTexture(MATERIAL_TEXTURE, texture);
+                        material.setFloat(MATERIAL_UV_SCALE,10f);
+                    });
+        }).exceptionally((throwable -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage((throwable.getMessage()))
+                    .setTitle("Error!");
+            AlertDialog dialog = builder.create();
+            dialog.show();
+            return null;
+        }));
+
+    }
 }
