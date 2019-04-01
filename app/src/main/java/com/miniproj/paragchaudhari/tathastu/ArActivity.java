@@ -68,26 +68,27 @@ public class ArActivity extends AppCompatActivity {
         );
 
         clear_object_button = (Button) findViewById(R.id.ar_clear_button);
-        clear_object_button.setOnClickListener(new View.OnClickListener() {
+
+        fragment.getArSceneView().getScene().addOnPeekTouchListener(new Scene.OnPeekTouchListener() {
             @Override
-            public void onClick(View view) {
-                Delete_node(fragment);
+            public void onPeekTouch(HitTestResult hitTestResult, MotionEvent motionEvent) {
+                if (hitTestResult.getNode()!= null){
+                    clear_object_button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if(hitTestResult.getNode()!=null)
+                            {
+                                hitTestResult.getNode().setParent(null);
+                            }
+                        }
+                    });
+
+                }
             }
         });
 
     }
-     private void Delete_node(ArFragment fragment){
-            fragment.getArSceneView().getScene().addOnPeekTouchListener(new Scene.OnPeekTouchListener() {
-                @Override
-                public void onPeekTouch(HitTestResult hitTestResult, MotionEvent motionEvent) {
-                    if(hitTestResult.getNode()!=null) {
-                        Node hitnode = hitTestResult.getNode();
-                        hitnode.setParent(null);
 
-                    }
-                }
-            });
-        }
 
 
 
@@ -141,6 +142,16 @@ public class ArActivity extends AppCompatActivity {
         gallery.addView(expensive_sofa);
 
 
+        ImageView night_table = new ImageView(this);
+        night_table.setImageResource(R.drawable.night_stand);
+        night_table.setContentDescription("Night Stand");
+        night_table.setOnClickListener(view -> {
+            selectedObject = Uri.parse("eb_nightstand_01.sfb");
+
+        });
+        gallery.addView(night_table);
+
+
     }
 
 
@@ -156,6 +167,7 @@ public class ArActivity extends AppCompatActivity {
                     AlertDialog dialog = builder.create();
                     dialog.show();
                     return null;
+
                 }));
     }
 

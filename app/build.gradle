@@ -2,11 +2,11 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.ar.sceneform.plugin'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 27
     defaultConfig {
         applicationId "com.miniproj.paragchaudhari.tathastu"
         minSdkVersion 26
-        targetSdkVersion 28
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -25,7 +25,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.google.ar:core:1.7.0'
     implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.7.0'
@@ -64,3 +64,9 @@ sceneform.asset('sampledata/computer table/computer_table.obj',
         'default',
         'sampledata/computer table/computer_table.sfa',
         'src/main/assets/computer_table')
+
+
+sceneform.asset('sampledata/nightstand/eb_nightstand_01.obj',
+        'default',
+        'sampledata/nightstand/eb_nightstand_01.sfa',
+        'src/main/assets/eb_nightstand_01')
