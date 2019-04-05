@@ -172,12 +172,16 @@ public class ArActivity extends AppCompatActivity {
     }
 
     private void addNodeToScene(ArFragment fragment, Anchor anchor, Renderable renderable) {
+        Custom_node custom_node = new Custom_node();
         AnchorNode anchorNode = new AnchorNode(anchor);
         TransformableNode node = new TransformableNode(fragment.getTransformationSystem());
-        node.setRenderable(renderable);
-        node.setParent(anchorNode);
-        fragment.getArSceneView().getScene().addChild(anchorNode);
-        node.select();
+        custom_node.anchorNode = new AnchorNode(anchor);
+        custom_node.transformableNode = new TransformableNode(fragment.getTransformationSystem());
+        custom_node.transformableNode.setRenderable(renderable);
+        custom_node.transformableNode.setParent(custom_node.anchorNode);
+        fragment.getArSceneView().getScene().addChild(custom_node.anchorNode);
+        custom_node.transformableNode.select();
+
 
     }
 
