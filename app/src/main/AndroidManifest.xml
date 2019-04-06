@@ -23,9 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ArActivity">
+        <activity android:name=".ArActivity"></activity>
+        <activity android:name=".know1"></activity>
+        <activity android:name=".knowledge" />
 
-        </activity>
 
         <meta-data
             android:name="com.google.ar.core"
