@@ -33,11 +33,12 @@ import static com.google.ar.sceneform.rendering.PlaneRenderer.MATERIAL_UV_SCALE;
 
 
 public class ArActivity extends AppCompatActivity {
-    private LinearLayout gallery = findViewById(R.id.gallery_layout);
+
     private ImageView button2;
-    private ArFragment fragment;
+    private Custom_arFragment fragment;
     private Uri selectedObject;
     private Button clear_object_button;
+    private LinearLayout gallery;
     AnchorNode anchorNode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +51,7 @@ public class ArActivity extends AppCompatActivity {
                 mainactivity(view);
             }
         });
-        fragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
+        fragment = (Custom_arFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
         setPlaneTexture("lines.png");
         InitializeGallery();
         fragment.setOnTapArPlaneListener(
@@ -95,7 +96,7 @@ public class ArActivity extends AppCompatActivity {
 
 
     private void InitializeGallery() {
-
+        gallery = findViewById(R.id.gallery_layout);
 
         ImageView couch = new ImageView(this);
         couch.setImageResource(R.drawable.couch_thumb);
