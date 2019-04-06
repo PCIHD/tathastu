@@ -5,9 +5,10 @@ package com.miniproj.paragchaudhari.tathastu;
 import android.support.annotation.Nullable;
 
 
+import com.google.ar.sceneform.Node;
 import com.google.ar.sceneform.collision.RayHit;
 
-public class HitTestResult extends RayHit {
+public class HitTestResult extends RayHit  {
     @Nullable
     private Custom_node node;
 

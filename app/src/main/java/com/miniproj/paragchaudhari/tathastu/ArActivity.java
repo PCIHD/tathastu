@@ -20,8 +20,8 @@ import com.google.ar.core.Plane;
 import com.google.ar.sceneform.AnchorNode;
 
 import com.google.ar.sceneform.HitTestResult;
-import com.google.ar.sceneform.Node;
 import com.google.ar.sceneform.Scene;
+
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.Renderable;
 import com.google.ar.sceneform.rendering.Texture;
@@ -33,6 +33,7 @@ import static com.google.ar.sceneform.rendering.PlaneRenderer.MATERIAL_UV_SCALE;
 
 
 public class ArActivity extends AppCompatActivity {
+    private LinearLayout gallery = findViewById(R.id.gallery_layout);
     private ImageView button2;
     private ArFragment fragment;
     private Uri selectedObject;
@@ -71,7 +72,7 @@ public class ArActivity extends AppCompatActivity {
 
         fragment.getArSceneView().getScene().addOnPeekTouchListener(new Scene.OnPeekTouchListener() {
             @Override
-            public void onPeekTouch(HitTestResult hitTestResult, MotionEvent motionEvent) {
+            public void onPeekTouch(HitTestResult hitTestResult , MotionEvent motionEvent) {
                 if (hitTestResult.getNode()!= null){
                     clear_object_button.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -92,12 +93,9 @@ public class ArActivity extends AppCompatActivity {
 
 
 
-    private void CLEARSCENE(Anchor anchor){
-        if(anchor !=null)
-        anchor.detach();
-    }
+
     private void InitializeGallery() {
-        LinearLayout gallery = findViewById(R.id.gallery_layout);
+
 
         ImageView couch = new ImageView(this);
         couch.setImageResource(R.drawable.couch_thumb);
@@ -159,7 +157,7 @@ public class ArActivity extends AppCompatActivity {
         ModelRenderable.builder()
                 .setSource(fragment.getContext(), model)
                 .build()
-                .thenAccept(renderable -> addNodeToScene(fragment, anchor, renderable))
+                .thenAccept(renderable -> addNodeToScene(fragment, anchor, renderable,model))
                 .exceptionally((throwable -> {
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setMessage((throwable.getMessage()))
@@ -171,7 +169,7 @@ public class ArActivity extends AppCompatActivity {
                 }));
     }
 
-    private void addNodeToScene(ArFragment fragment, Anchor anchor, Renderable renderable) {
+    private void addNodeToScene(ArFragment fragment, Anchor anchor, Renderable renderable,Uri model) {
         Custom_node custom_node = new Custom_node();
         AnchorNode anchorNode = new AnchorNode(anchor);
         TransformableNode node = new TransformableNode(fragment.getTransformationSystem());
@@ -180,10 +178,15 @@ public class ArActivity extends AppCompatActivity {
         custom_node.transformableNode.setRenderable(renderable);
         custom_node.transformableNode.setParent(custom_node.anchorNode);
         fragment.getArSceneView().getScene().addChild(custom_node.anchorNode);
+        custom_node.name = model;
         custom_node.transformableNode.select();
+        //addtogallery(model,custom_node);
+
+
 
 
     }
+
 
     private void mainactivity(View view){
         Intent mainactivity = new Intent(ArActivity.this,MainActivity.class);
