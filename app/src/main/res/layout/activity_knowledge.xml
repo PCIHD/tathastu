@@ -23,73 +23,83 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
-            android:text="Button One" />
+            android:background="@drawable/maindoor"
+            android:text="Main Door" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Button Two" />
+            android:background="@drawable/kitchen"
+            android:text="Kitchen" />
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Button Three" />
+            android:background="@drawable/bedrooms"
+            android:text="Bedroom" />
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Button Four" />
+            android:background="@drawable/studyrooms"
+            android:text="Study Room" />
 
         <Button
             android:id="@+id/button5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Button Five" />
+            android:background="@drawable/poojarooms"
+            android:text="Pooja Room" />
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Button Six" />
+            android:background="@drawable/bathrooms"
+            android:text="Bathroom" />
 
         <Button
             android:id="@+id/button7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Button Seven" />
+            android:background="@drawable/wealth"
+            android:text="Money" />
 
         <Button
             android:id="@+id/button8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Button Eight" />
+            android:background="@drawable/marriage"
+            android:text="Marriage" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/button9"
+            android:layout_width="400dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="Button Nine" />
+            android:background="@drawable/education"
+            android:text="Education" />
     </LinearLayout>
 </ScrollView>

@@ -1,3 +1,238 @@
 <resources>
     <string name="app_name">Tathastu</string>
+
+
+    <string name="action_settings">Settings</string>
+
+    <string name="compass_dial" translatable="true">Compass Dial</string>
+    <string name="compass_hands" translatable="true">Compass Hands</string>
+
+    <string name="sotw_north">N</string>
+    <string name="sotw_east">E</string>
+    <string name="sotw_south">S</string>
+    <string name="sotw_west">W</string>
+    <string name="sotw_northeast">NE</string>
+    <string name="sotw_northwest">NW</string>
+    <string name="sotw_southeast">SE</string>
+    <string name="sotw_southwest">SW</string>
+
+    <string name="maindoor">Main entrance door holds an important place in your house. \n
+        It creates the first impression of your house. It is not just a source of the entrance of people, but energy as well. \n
+        Thus, the main entrance has been given prime importance in Vaastu Shastra.
+        It lets the flow of cosmic energy in or outside the house.
+        Cosmic energy is that promotes your health, wealth and harmony. \n\n
+
+        Everything and anything around you affect you positively or negatively if not placed correctly.
+        Similar is the case with the main entrance door.
+        It is the entry and exit of the positive and negative energies. Vastu for main entrance door should be taken seriously,
+        because of course you don’t want the negative energy to get stuck in your home or at your workplace.
+        Nevertheless, the main door of your house is where the most of the energy enters and
+        therefore this door determines the flow of vibrations experienced by the household and its members.</string>
+
+    <string name="kitchen">The kitchen has always been considered as a very important place in the household. \n
+        In the olden times, big kitchen rooms used to be the norms. There was no hard and fast rule,
+        for the construction of the traditional kitchens in a specific direction.\n\n
+        As per Vastu for Kitchen by Tathastu, any person needs to spend most of the time facing the favorable direction in order to energize the 7 Chakras. \n
+        Usually, we spend most of the time Sleeping and Working, hence facing favorable direction while working is suggestible.
+        For any homemaker, he/she spends substantial time in the kitchen preparing food for the family. \n
+        We suggest him/her to face the favorable direction while spending time in the Kitchen preparing the Food. \n\n
+        \t    It has emerged only in the last few years, duly propagated and popularized by the Vastu scholars.
+        Now this ‘myth’ has stayed down the ages with many superstitions and beliefs. It is said that if the kitchen is not in the southeast direction, it will surely not bring any harm upon the family.
+        Also, while cooking, the housewife or the cook must face the East direction. It is also believed that the direction of the ‘Stove’ is also important. \n
+        Now the very important question is who is going to decide the right direction of the ‘gas stove’ or the ‘facing direction of the cook’ while cooking. \n\n
+        \t    As per Tathastu, It is not important for the kitchen to be in the southeast direction.
+        It should not matter if the kitchen is not facing the relevant expected direction.
+        In flats, apartments and condominium are very unlikely to get Vastu for Kitchen. \n\n
+
+        Small and minor adjustments could be made as per Tathastu recommendations as so to mitigate the effect of the southeast direction being not there, for the kitchen.
+        As per Vastu for Kitchen The person doing the cooking should have his / her date of birth approved favorable direction for cooking, that should be followed.
+    </string>
+
+    <string name="bedroom">Bedrooms are of significant concern as per Vastu. \n
+        It illustrates a remarkable part in the positioning and planning of the bedroom.
+        The atmosphere of your bedroom is supposed to be soothing and relaxing in order to sleep well. \n
+        Relying on correct Vastu for bedroom is important to maintain peace and harmony in that place,
+        as you retire from your worries and sleep without any tension. \n\n
+
+        Sleeping is the craft of outright unwinding of body and psyche.
+        It’s a time when “the cognizance of the world is suspended” and sets you into a course of an
+        incomprehensible trip into the road of calmness and stability. \n
+        This procedure begins with a room. The bedroom is the home to aggregate peace and protection. \n\n
+
+        Vastu for bedrooms guarantees sound sleep which is imperative to lead an anxiety-free living.
+        Vastu considers several variables while building and outlining rooms. \n
+        There are several guidelines in the science and methodology of Vastu to create healthy vibes
+        in your bedroom and create positivity around you.</string>
+
+    <string name="studyroom">One of an essential thing for humans is the process of learning. \n
+        The process takes place through several ways, such as, reading or studying, observing,
+        and many other physical and spiritual means. \n\n
+        Most commonly followed method is studying. Studying needs a lot of attention, concentration and focus.
+        Also it demands a place where one sits with a calm, composed and an open mind.
+        The study room is a place where the grasping power of the mind increases;
+        a place where one sits gently to focus on studies. \n\n
+
+        You have to make sure that the study room in your house is Vastu compliant so that while studying,
+        the concentration level is maintained. \n
+        The study room should be placed at an appropriate place and as per your favourable direction.
+        Vastu for Study Room and The Directions \n\n
+        The study room should be situated in directions that are viewed as favourable and auspicious.
+        As per Vastu for study room principles, directions enhance the concentration of a student. \n
+        Ensure that there is no mirror reflection in the study room as this may have an impact on the student.
+        Students facing their favourable directions will feel energised in the right way
+        and boost concentration levels and enable their Ajna Chakra. \n
+
+        >> These are some of the Study Room Vastu Tips \n
+        > There should be an open space for students as it helps to develop fresh thoughts \n
+        > The walls of study room should be painted in light and soothing colours \n
+        > Avoid using dark colours for the study room \n
+        > Lighting in the Study Room should be bright \n
+        > Avoid dim lights, it can break concentration and focus. \n
+        > Sunlight is the best light possible for any student \n
+        > If the positioning of the books, table are put in a proper manner \n
+        > Avoid sitting under a pillar, you will start having study pressure \n
+        > The vibration in this room should be a soothing voice. \n
+        > Do not sit below the beam while reading. \n
+        > Study place should have ample amount of light. \n
+        > The student should not face blank wall or window while learning. \n
+        > Space between student and wall in front facilitates open mentality and new ideas. Create positivity around. \n
+        > A solid wall behind student signifies support. \n
+        > Avoid toilets in study place as far as possible. \n
+        > The bookshelf should never be located over or above study table. \n
+        > Use square or rectangular study table for best results. \n
+        > Keep the study table some inches away from the wall. \n
+        > The study room should have images of Lord Ganesha and Goddess Saraswati. \n
+        > Placing a pyramid in study place balances energies and increases memory power. \n
+        > Keep the study place clutter and noise free. \n
+    </string>
+
+    <string name="poojaroom">Placement of everything in your house or workplace is of great value in Vastu,
+        as everything gives out positive or negative energy. \n
+        Pooja Room is one of those several things that should be taken care of according to Vastu as
+        it is one of the major sources of positive energy. \n
+        The correct placement of Pooja Room with Vastu not only brings positive energy,
+        but it also helps in meditating and relaxing. \n\n
+        Just like everything else, worshipping has some rules and regulations to follow.
+        A simple reason for this is producing positive energy by lightening up the lamps in the Pooja room,
+        by offering flowers to God, or lighting up Camphor or ‘Karpoor’ and incense sticks ‘Agarbatti’,
+        following other rituals. \n
+        Through Prayer one can energize ‘Ajna Chakra’ for knowledge and intelligence and ‘Sahasra Chakra’
+        for enlightenment that is close to god. \n\n
+
+        You need to have a very clear understanding of the ways of generating positive energy in the house. \n
+        Saral Vaastu helps you to provide you with the very simple and scientific solution to your Pooja Room problem. \n\n
+
+        >Avoid placing Pooja Chamber in your bedroom or wall adjacent to your bedroom \n
+        >Also, avoid the placement of Pooja Room near bathroom and toilets \n
+        >Avoid the photos of someone who passed away in your Pooja Room \n
+        >Do not keep dustbin or any kind dirt inside or near the Pooja room \n
+        >Never keep broken idols or images of your God \n
+        >Don’t sit directly on the floor of Pooja Room. Keep something to sit upon \n
+        >Do not place idols or images of God right in-front of the entrance \n
+
+    </string>
+
+    <string name="bathroom">Placement of toilet in a home is essential for the health and wealth. \n
+        A Vastu compliant house provides a health free and obstruction free house with peace and growth. \n
+        The bathroom is an essential section of the house. Toilets and bathrooms are a major source of negative energy
+        if they are not built as per rules and guidelines of Vastu. \n\n
+
+        According to Vastu Shastra, toilets and bathrooms in a home must be separate and not attached,
+        but there are over 7 billion people on earth and 70% of earth’s surface is water,
+        hence space is limited for a living and thus there are attached toilets and bathrooms \n\n
+
+        What can we expect from Vastu for Toilet and Bathroom? \n\n
+        In an attempt to effectively safeguard the inhabitants from the effect of negativity falling upon
+        their lives our ancestors and forefathers used to live in houses,
+        where toilets were located outside the house. But today, we have done just the opposite. \n
+        We have constructed toilets and washrooms inside the house for our convenience and luxury,
+        even if we have a large independent house where ‘attached toilets and bathrooms’ are the norm.
+
+        What can be done to change this approach? \n\n
+        Based on a practical and realistic approach, Vastu for Toilet and Bathroom proves to be the reason
+        to believe that the presence of toilets and washrooms in a suitable direction, will not bring bad luck. \n
+        In this regard, we have to remember and recollect what I have told everybody with regards to the fact of
+        every individual having four auspicious and four inauspicious directions,
+        based on the Date of Birth of that particular person, that affects the Vastu stature of that person
+        with regards to any structure. \n
+
+        Saral Vaastu provides remedies of his problems without any breakages or reconstruction of the house. \n
+        So that family members have a healthy, peaceful, satisfied and content life with a ‘livable lifestyle’,
+        rather than a forceful lifestyle thrust upon us by contemporary circumstance. \n\n
+
+    </string>
+
+    <string name="money">Wealth plays a very important part in everyone’s life.
+        Without money, there is no respectability in the society. \n
+        Wealth generation is essential for making our life comfortable and getting a good status in the society.
+        If the breadwinner of the family has suffered a big financial loss, then the cascading effect falls
+        on each member of the family, including children. \n
+        Tension, distress, and anxiety amongst the family members, in the long run, could lead to court cases,
+        disharmony and even anti-social acts. This is an accepted fact too, that in this rat race of wealth creation,
+        very few people may reach their ultimate goals, leaving the majority out, who in turn blame their destiny,
+        fate or ill-luck. \n\n
+
+        Wealth Place Laxmi Sthan \n
+        Every house and workplace have a ‘Wealth Place’. Sometimes the Wealth place may not be in the house or the workplace.
+        Even if the Wealth place is there in the house, then it may be blocked due to the location of the bathrooms,
+        toilets and utility rooms and this may lead to a substantial financial loss, for the whole family.
+        Vastu for wealth helps you overcome all the wealth related issues in home or in a workplace. \n\n
+
+        The Position of Main Door \n
+        The entrance or the main door of the house or workplace, if it lies in the unfavorable direction,
+        the acute financial loss occurs leading to much of agony. \n
+        There may be various aspects of financial loss that may bring a whole amount of financial distress in a person’s life. \n
+        In some instances, people may have given out or lent a sizable amount of money to others,
+        but are not getting the returns on time, neither the Principal amount nor the interest.
+        Similarly, money invested in the wrong business may lead to a debacle in your income,
+        proving to be a very bad business proposal that has gone wrong. \n
+        It may also lead to the loss of the principal amount that may get blocked, thus not getting any profit out of it,
+        at all. On papers, up gradation in income or profits could be shown, but actually there would not be any profit at all. \n\n
+
+        In extreme cases, if a person, who has taken a huge loan from the bank,
+        is not able to pay the monthly installments, then, in the long run, it may lead to bankruptcy.
+    </string>
+
+    <string name="marriage">Vastu for Marriage and Relationship \n
+        Tathastu concepts were formulated after years of research by Dr. Shri. Chandrashekhar Guruji. \n
+        Your relationship with your family members, office colleagues or business partners is impacted by the imbalanced
+        flow of cosmic energy in your home, office, and business establishments. \n\n
+
+        Relationships play a very important role in our everyday life. Amongst different form of relationships,
+        the marital relationship is considered to be highly sacred and pious in our culture. \n
+        The marital relationship or the institution of marriage, not only creates a bond between the bride and the groom,
+        but also their families. \n\n
+
+        Marriage is an important phase in everybody’s life. In the traditional family structure,
+        it is imperative for everyone to go through the ‘Grahastra Ashrama’ or experience a conjugal life. But nowadays,
+        we witnesses numerous cases of separation and divorce. This has caused a lot of social turmoil in the society. \n
+        Tathastu offers easy-to-implement solutions to overcome factors that cause delay in marriage or marital discord. \n
+        It show a simple and unique way to leverage ancient Vastu principles by harnessing the infinite power of cosmic energy
+        of the universe. \n\n
+
+        ‘Relationship Zones’ – ‘Sambandhsthan’ and ‘Vivahsthan’ \n
+        Every house has a relationship zones, referred as ‘Sambandsthana’ and ‘Vivavsthana’ impacting relationships and
+        marriage respectively. These specific zones should be clutter-free and not in proximity to toilets or bathrooms or
+        utility rooms that are potential sources of negativity. If these places have clutter or are in close proximity to
+        elements that generate negativity like toilets or bathrooms, then marriage may be get delayed or one may face
+        relationship issues.\n
+    </string>
+
+    <string name="education">In this world of cut-throat competition,
+        every parent or guardian is certainly concerned about the educational prospects of their children.  \n
+        Every student wants to score high marks in order to get success in their respective exams or get admission in
+        reputable schools, colleges or institutions of higher learning. In this rat race of reaching the peak,
+        some get the desired results, some do not succeed and some fails miserably. \n
+        The occurrence of disappointing results may, in turn, make the failing students full of suicidal tendencies,
+        depression, insomnia and a feeling of utter helplessness. Complete success in learning at their own level in
+        their respective field of study is the ambition and aim of every student. \n
+
+        All education-related problems lie in your house. So is the solution to those problems. \n\n
+        Vidhya Sthan (Education-Place) \n
+        Every house has a ‘Vidya Sthan’ or an Education Place. \n
+        Sometimes, the education place may not be present in the house;
+        even if the education place is present in the house, there are chances it might be blocked due to the
+        location of the bathroom, toilet or utility rooms. Due to this,
+        the educational issues start raising its head and the most vulnerable of the students get affected. \n
+    </string>
 </resources>

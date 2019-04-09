@@ -1,7 +1,9 @@
 package com.miniproj.paragchaudhari.tathastu;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
+import android.widget.TextView;
 
 public class know1 extends AppCompatActivity {
 
@@ -9,5 +11,9 @@ public class know1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_know1);
+
+        TextView textView = (TextView) findViewById(R.id.text_view);
+        textView.setMovementMethod(new ScrollingMovementMethod());
+
     }
 }

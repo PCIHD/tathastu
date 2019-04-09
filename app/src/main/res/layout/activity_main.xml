@@ -4,36 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainbackground"
-    android:orientation="vertical"
+    android:background="@color/colorAccent"
+    android:scaleType="centerCrop"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button"
-        android:layout_width="169dp"
-        android:layout_height="62dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+
         android:text="ARVision"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.187" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        tools:layout_marginRight="100dp" />
+    " />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="165dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="40dp"
+
         android:text="KNOWLEDGE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
         tools:text="KNOWLEDGE" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="160dp"
+
+        android:layout_height="160dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginBottom="8dp"
+
+        android:text="Navin"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Navin" />
+
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+
+        android:text="Compass"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </android.support.constraint.ConstraintLayout>

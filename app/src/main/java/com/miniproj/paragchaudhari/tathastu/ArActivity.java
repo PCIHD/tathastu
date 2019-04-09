@@ -2,6 +2,8 @@ package com.miniproj.paragchaudhari.tathastu;
 
 import android.content.Intent;
 
+import android.graphics.Bitmap;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -20,8 +22,8 @@ import com.google.ar.core.Plane;
 import com.google.ar.sceneform.AnchorNode;
 
 import com.google.ar.sceneform.HitTestResult;
+import com.google.ar.sceneform.Node;
 import com.google.ar.sceneform.Scene;
-
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.Renderable;
 import com.google.ar.sceneform.rendering.Texture;
@@ -32,13 +34,13 @@ import static com.google.ar.sceneform.rendering.PlaneRenderer.MATERIAL_TEXTURE;
 import static com.google.ar.sceneform.rendering.PlaneRenderer.MATERIAL_UV_SCALE;
 
 
-public class ArActivity extends AppCompatActivity {
 
+
+public class ArActivity extends AppCompatActivity {
     private ImageView button2;
-    private Custom_arFragment fragment;
+    private ArFragment fragment;
     private Uri selectedObject;
     private Button clear_object_button;
-    private LinearLayout gallery;
     AnchorNode anchorNode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +53,7 @@ public class ArActivity extends AppCompatActivity {
                 mainactivity(view);
             }
         });
-        fragment = (Custom_arFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
+        fragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
         setPlaneTexture("lines.png");
         InitializeGallery();
         fragment.setOnTapArPlaneListener(
@@ -73,7 +75,7 @@ public class ArActivity extends AppCompatActivity {
 
         fragment.getArSceneView().getScene().addOnPeekTouchListener(new Scene.OnPeekTouchListener() {
             @Override
-            public void onPeekTouch(HitTestResult hitTestResult , MotionEvent motionEvent) {
+            public void onPeekTouch(HitTestResult hitTestResult, MotionEvent motionEvent) {
                 if (hitTestResult.getNode()!= null){
                     clear_object_button.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -91,12 +93,12 @@ public class ArActivity extends AppCompatActivity {
 
     }
 
-
-
-
-
+    private void CLEARSCENE(Anchor anchor){
+        if(anchor !=null)
+        anchor.detach();
+    }
     private void InitializeGallery() {
-        gallery = findViewById(R.id.gallery_layout);
+        LinearLayout gallery = findViewById(R.id.gallery_layout);
 
         ImageView couch = new ImageView(this);
         couch.setImageResource(R.drawable.couch_thumb);
@@ -154,11 +156,12 @@ public class ArActivity extends AppCompatActivity {
     }
 
 
+
     private void placeObject(ArFragment fragment, Anchor anchor, Uri model) {
         ModelRenderable.builder()
                 .setSource(fragment.getContext(), model)
                 .build()
-                .thenAccept(renderable -> addNodeToScene(fragment, anchor, renderable,model))
+                .thenAccept(renderable -> addNodeToScene(fragment, anchor, renderable))
                 .exceptionally((throwable -> {
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setMessage((throwable.getMessage()))
@@ -170,24 +173,15 @@ public class ArActivity extends AppCompatActivity {
                 }));
     }
 
-    private void addNodeToScene(ArFragment fragment, Anchor anchor, Renderable renderable,Uri model) {
-        Custom_node custom_node = new Custom_node();
+    private void addNodeToScene(ArFragment fragment, Anchor anchor, Renderable renderable) {
         AnchorNode anchorNode = new AnchorNode(anchor);
         TransformableNode node = new TransformableNode(fragment.getTransformationSystem());
-        custom_node.anchorNode = new AnchorNode(anchor);
-        custom_node.transformableNode = new TransformableNode(fragment.getTransformationSystem());
-        custom_node.transformableNode.setRenderable(renderable);
-        custom_node.transformableNode.setParent(custom_node.anchorNode);
-        fragment.getArSceneView().getScene().addChild(custom_node.anchorNode);
-        custom_node.name = model;
-        custom_node.transformableNode.select();
-        //addtogallery(model,custom_node);
-
-
-
+        node.setRenderable(renderable);
+        node.setParent(anchorNode);
+        fragment.getArSceneView().getScene().addChild(anchorNode);
+        node.select();
 
     }
-
 
     private void mainactivity(View view){
         Intent mainactivity = new Intent(ArActivity.this,MainActivity.class);

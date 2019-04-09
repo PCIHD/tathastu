@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".Compass">
+
+    <ImageView
+        android:id="@+id/main_image_dial"
+        android:layout_width="164dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="247dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-150dp"
+        android:contentDescription="@string/compass_dial"
+        android:src="@drawable/dial" />
+
+    <ImageView
+        android:id="@+id/main_image_hands"
+        android:layout_width="145dp"
+        android:layout_height="103dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="254dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="-150dp"
+        android:contentDescription="@string/compass_hands"
+        android:src="@drawable/hands" />
+
+
+    <TextView
+        android:id="@+id/sotw_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
