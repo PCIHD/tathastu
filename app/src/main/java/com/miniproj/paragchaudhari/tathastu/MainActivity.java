@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private Button button,button4;
-    private Button button2,button3;
+    private Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button3 = (Button) findViewById(R.id.button3);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                opennav();
-            }
-        });
+
 
         button4 = (Button) findViewById(R.id.button10);
         button4.setOnClickListener(new View.OnClickListener() {
@@ -62,10 +56,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void opennav(){
-        Intent intent =new Intent(this,MainActivity2.class);
-        startActivity(intent);
-    }
+
 
     public void opencomp(){
         Intent intent =new Intent(this,CompassActivity.class);

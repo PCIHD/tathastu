@@ -4,13 +4,25 @@ import android.content.Intent;
 
 import android.graphics.Bitmap;
 import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import android.support.v7.view.menu.MenuView;
 import android.util.Log;
+import android.view.ActionProvider;
+import android.view.ContextMenu;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -41,11 +53,16 @@ public class ArActivity extends AppCompatActivity {
     private ArFragment fragment;
     private Uri selectedObject;
     private Button clear_object_button;
-    AnchorNode anchorNode;
+    private DrawerLayout drawerLayout;
+
+    private NavigationView navigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ar_activity);
+        setContentView(R.layout.activity_navigation_drawer_activity);
+        InitializeDrawer();
+
         button2 = (ImageView) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,9 +70,13 @@ public class ArActivity extends AppCompatActivity {
                 mainactivity(view);
             }
         });
+
+
+
         fragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
         setPlaneTexture("lines.png");
-        InitializeGallery();
+
+        InitializeDrawer();
         fragment.setOnTapArPlaneListener(
                 ((hitResult, plane, motionEvent) -> {
                     if (plane.getType() != Plane.Type.HORIZONTAL_UPWARD_FACING) {
@@ -90,6 +111,40 @@ public class ArActivity extends AppCompatActivity {
                 }
             }
         });
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                menuItem.setChecked(true);
+                switch(menuItem.getItemId()){
+                    case R.id.Bed_01_sfb:
+                        selectedObject = Uri.parse("Bed_01.sfb");
+                        return true;
+                    case R.id.computer_table_sfb:
+                        selectedObject = Uri.parse("computer_table.sfb");
+                        return true;
+                    case R.id.dining_table_sfb:
+                        selectedObject = Uri.parse("dining_table.sfb");
+                        return true;
+                    case R.id.eb_nightstand_01_sfb:
+                        selectedObject = Uri.parse("eb_nightstand_01.sfb");
+                        return true;
+                    case R.id.expensive_sofa_sfb:
+                        selectedObject = Uri.parse("expensive_sofa.sfb");
+                        return true;
+                    case R.id.model_sfb:
+                        selectedObject  = Uri.parse("model.sfb");
+                        return true;
+
+
+
+
+
+
+                }
+                return  true;
+            }
+        });
+
 
     }
 
@@ -215,6 +270,18 @@ public class ArActivity extends AppCompatActivity {
             dialog.show();
             return null;
         }));
+
+    }
+    private void InitializeDrawer(){
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+
+
+
+
+
+
 
     }
 }

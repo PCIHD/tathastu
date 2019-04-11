@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Bed_01.sfb"
+            android:icon="@drawable/bed"
+            android:title="Bed" />
+        <item
+            android:id="@+id/computer_table.sfb"
+            android:icon="@drawable/computer_table"
+            android:title="Gallery" />
+        <item
+            android:id="@+id/dining_table.sfb"
+            android:icon="@drawable/dining_table"
+            android:title="Dining Table" />
+        <item
+            android:id="@+id/expensive_sofa.sfb"
+            android:icon="@drawable/expensive_sofa"
+            android:title="Expensive Sofa" />
+        <item
+            android:id="@+id/eb_nightstand_01.sfb"
+            android:icon="@drawable/night_stand"
+            android:title="Night Stand" />
+        <item
+            android:id="@+id/model.sfb"
+            android:icon="@drawable/couch_thumb"
+            android:title="Couch" />
+    </group>
+
+
+
+
+</menu>

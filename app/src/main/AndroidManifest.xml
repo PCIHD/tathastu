@@ -4,7 +4,7 @@
     package="com.miniproj.paragchaudhari.tathastu">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera.ar"
@@ -17,7 +17,7 @@
         android:roundIcon="@drawable/palm"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".know9"></activity>
+        <activity android:name=".know9" />
         <activity android:name=".know8" />
         <activity android:name=".know7" />
         <activity android:name=".know6" />
@@ -27,11 +27,7 @@
         <activity android:name=".know2" />
         <activity android:name=".know1" />
         <activity android:name=".knowledge" />
-
-        <activity android:name=".MainActivity2"/>
         <activity android:name=".MainActivity">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,12 +35,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".ArActivity" />
+
         <meta-data
             android:name="com.google.ar.core"
             android:value="required" />
-        <activity android:name=".CompassActivity"
-            android:label="Compass" >
-        </activity>
+
+        <activity
+            android:name=".CompassActivity"
+            android:label="Compass"></activity>
     </application>
 
 </manifest>
