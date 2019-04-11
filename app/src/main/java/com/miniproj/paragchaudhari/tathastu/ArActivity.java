@@ -74,7 +74,9 @@ public class ArActivity extends AppCompatActivity {
 
 
         fragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.sceneform_fragment);
-        setPlaneTexture("lines.png");
+        fragment.getPlaneDiscoveryController().hide();
+        //setPlaneTexture("lines.png");
+
 
         InitializeDrawer();
         fragment.setOnTapArPlaneListener(
