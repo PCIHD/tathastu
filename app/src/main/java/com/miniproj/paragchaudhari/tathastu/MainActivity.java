@@ -10,13 +10,21 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private Button button,button4;
+    private Button button,button4,button3;
     private Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openvastulist();
+            }
+        });
 
         button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openvastulist(){
+        Intent intent =new Intent(this,vastu_list.class);
+        startActivity(intent);
+    }
 
 
     public void opencomp(){
