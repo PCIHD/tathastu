@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 
 public class CompassActivity extends AppCompatActivity {
+    private Custom_arFragment fragment;
 
     private static final String TAG = "CompassActivity";
 
@@ -24,6 +25,8 @@ public class CompassActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compass);
+        fragment = (Custom_arFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
+        fragment.getPlaneDiscoveryController().hide();
 
         sotwFormatter = new SOTWFormatter(this);
 

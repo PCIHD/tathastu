@@ -28,6 +28,7 @@
             android:id="@+id/model.sfb"
             android:icon="@drawable/couch_thumb"
             android:title="Couch" />
+
     </group>
 
 

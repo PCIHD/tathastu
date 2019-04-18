@@ -25,6 +25,7 @@ import android.view.MotionEvent;
 import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -143,7 +144,9 @@ public class ArActivity extends AppCompatActivity {
 
 
                 }
+                drawerLayout.closeDrawer(GravityCompat.START);
                 return  true;
+
             }
         });
 
@@ -277,7 +280,6 @@ public class ArActivity extends AppCompatActivity {
     private void InitializeDrawer(){
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
-
 
 
 
