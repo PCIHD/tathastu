@@ -11,7 +11,7 @@ public class Custom_arFragment extends ArFragment {
     {
         getPlaneDiscoveryController().setInstructionView(null);
         Config config = super.getSessionConfiguration(session);
-        config.setCloudAnchorMode(Config.CloudAnchorMode.ENABLED);
+        config.setFocusMode(Config.FocusMode.AUTO);
         return config;
 
     }

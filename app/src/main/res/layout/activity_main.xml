@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Activity_main_ArVision_Button"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="160dp"
         android:layout_height="160dp"
@@ -26,7 +26,7 @@
     " />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Activity_Main_Knowledge_Button"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="160dp"
         android:layout_height="160dp"
@@ -36,12 +36,13 @@
 
         android:text="KNOWLEDGE"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+
+        app:layout_constraintEnd_toStartOf="@+id/Activity_main_ArVision_Button"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="KNOWLEDGE" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/Activity_MainNavin_Button"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="160dp"
 
@@ -50,13 +51,13 @@
         android:layout_marginBottom="8dp"
 
         android:text="Navin"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/Activity_main_ArVision_Button"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="Navin" />
 
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/Activity_main_compass_button"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:layout_marginStart="39dp"
@@ -64,8 +65,8 @@
         android:layout_marginBottom="8dp"
 
         android:text="Compass"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/Activity_Main_Knowledge_Button"
+
         app:layout_constraintStart_toStartOf="parent" />
 
 

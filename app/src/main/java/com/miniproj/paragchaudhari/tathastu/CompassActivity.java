@@ -23,7 +23,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import com.google.ar.core.Frame;
+
 
 
 import java.io.ByteArrayOutputStream;
@@ -58,6 +60,15 @@ public class CompassActivity extends AppCompatActivity {
         checkpermission();
         fragment = (Custom_arFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
         fragment.getPlaneDiscoveryController().hide();
+
+
+
+
+
+
+
+
+
         door_button = (Button) findViewById(R.id.Compass_doorbutton);
         window_button=(Button) findViewById(R.id.Compass_windowButton);
         door_button.setOnClickListener(new View.OnClickListener() {
