@@ -1,7 +1,7 @@
 package com.miniproj.paragchaudhari.tathastu;
 
 import android.Manifest;
-import android.app.Activity;
+
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,7 +11,7 @@ import android.graphics.YuvImage;
 import android.media.Image;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.Settings;
+
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -25,10 +25,10 @@ import android.widget.TextView;
 
 import com.google.ar.core.Frame;
 
-import java.io.BufferedOutputStream;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileDescriptor;
+
 import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
 import java.text.SimpleDateFormat;
@@ -55,6 +55,7 @@ public class CompassActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compass);
+        checkpermission();
         fragment = (Custom_arFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
         fragment.getPlaneDiscoveryController().hide();
         door_button = (Button) findViewById(R.id.Compass_doorbutton);
@@ -221,6 +222,15 @@ public class CompassActivity extends AppCompatActivity {
         }
     }
 
+    private void checkpermission(){
+        if(ContextCompat.checkSelfPermission(this , Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, 1);
+        }
+            if(ContextCompat.checkSelfPermission(this , Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+
+                ActivityCompat.requestPermissions(this,REQUIRED_PERMISSIONS,2);
+        }
+    }
 
 
 
