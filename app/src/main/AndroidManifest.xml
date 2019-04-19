@@ -3,39 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.miniproj.paragchaudhari.tathastu">
 
-    <uses-permission android:name="android.permission.FLASHLIGHT" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.CAMERA" />
-
-    <uses-feature android:name="android.hardware.camera.front" />
-    <uses-feature android:name="android.hardware.microphone" />
-    <uses-feature android:name="android.hardware.camera2" />
-    <uses-feature
-        android:name="android.hardware.camera.autofocus"
-        android:required="true" />
-    <uses-feature android:name="android.hardware.camera.flash" />
-
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
-    <uses-feature android:name="android.hardware.camera.front"
-        tools:ignore="DuplicateUsesFeature" />
-    <uses-feature android:name="android.hardware.microphone"
-        tools:ignore="DuplicateUsesFeature" />
-    <uses-feature android:name="android.hardware.camera2"
-        tools:ignore="DuplicateUsesFeature" />
-    <uses-feature
-        android:name="android.hardware.camera.autofocus"
-        android:required="true" />
-    <uses-feature android:name="android.hardware.camera.flash" />
-
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera.ar"
@@ -44,13 +13,11 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="tathastu"
+        android:label="Tathastu"
         android:roundIcon="@drawable/palm"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".vastu_list" />
-        <activity android:name=".know9"/>
+        android:theme="@style/AppTheme">
+        <activity android:name=".know9" />
         <activity android:name=".know8" />
         <activity android:name=".know7" />
         <activity android:name=".know6" />
@@ -60,20 +27,7 @@
         <activity android:name=".know2" />
         <activity android:name=".know1" />
         <activity android:name=".knowledge" />
-
-
-        <activity android:name=".RunTimePermission"/>
-
-        <activity android:name=".Cam"/>
-        <activity
-            android:name=".PhotoVideoRedirectActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".WhatsappCameraActivity"
-            android:screenOrientation="behind" />
         <activity android:name=".MainActivity">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -81,12 +35,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".ArActivity" />
+
         <meta-data
             android:name="com.google.ar.core"
             android:value="required" />
-        <activity android:name=".CompassActivity"
-            android:label="Compass" >
-        </activity>
+
+        <activity
+            android:name=".CompassActivity"
+            android:label="Compass"></activity>
     </application>
 
 </manifest>
