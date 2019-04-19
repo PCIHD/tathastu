@@ -1,7 +1,19 @@
 package com.miniproj.paragchaudhari.tathastu;
 
+import android.Manifest;
+import android.app.Activity;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.ImageFormat;
+import android.graphics.Rect;
+import android.graphics.YuvImage;
 import android.media.Image;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -13,11 +25,19 @@ import android.widget.TextView;
 
 import com.google.ar.core.Frame;
 
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileDescriptor;
+import java.io.FileOutputStream;
+import java.nio.ByteBuffer;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
 public class CompassActivity extends AppCompatActivity {
+    private static final String REQUIRED_PERMISSIONS[] = { Manifest.permission.WRITE_EXTERNAL_STORAGE,
+    Manifest.permission.CAMERA};
     private Custom_arFragment fragment;
     private Button door_button,window_button;
     SnackbarHelper snackbarHelper = new SnackbarHelper();
@@ -131,6 +151,8 @@ public class CompassActivity extends AppCompatActivity {
             Image currentImage = currentFrame.acquireCameraImage();
             String name = generateFileName("Door");
             snackbarHelper.showMessage(this,name);
+            Save(currentImage , name);
+            currentImage.close();
         }catch (Exception exception){
             snackbarHelper.showMessage(this,"Error Acquiring image");
         }
@@ -141,10 +163,65 @@ public class CompassActivity extends AppCompatActivity {
             Image currentImage = currentFrame.acquireCameraImage();
             String name = generateFileName("Window");
             snackbarHelper.showMessage(this,name);
+            Save( currentImage, name);
+            currentImage.close();
         }catch (Exception exception){
             snackbarHelper.showMessage(this,"Error Acquiring image");
         }
     }
+    private static byte[] NV21toJPEG(byte[] nv21, int width, int height) {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        YuvImage yuv = new YuvImage(nv21, ImageFormat.NV21, width, height, null);
+        yuv.compressToJpeg(new Rect(0, 0, width, height), 100, out);
+        return out.toByteArray();
+    }
+    private static byte[] YUV_420_888toNV21(Image image) {
+        byte[] nv21;
+        ByteBuffer yBuffer = image.getPlanes()[0].getBuffer();
+        ByteBuffer uBuffer = image.getPlanes()[1].getBuffer();
+        ByteBuffer vBuffer = image.getPlanes()[2].getBuffer();
+
+        int ySize = yBuffer.remaining();
+        int uSize = uBuffer.remaining();
+        int vSize = vBuffer.remaining();
+
+        nv21 = new byte[ySize + uSize + vSize];
+
+        //U and V are swapped
+        yBuffer.get(nv21, 0, ySize);
+        vBuffer.get(nv21, ySize, vSize);
+        uBuffer.get(nv21, ySize + vSize, uSize);
+
+        return nv21;
+    }
+
+    private void Save(Image image , String name){
+        byte[] data = null;
+        data = NV21toJPEG(YUV_420_888toNV21(image),
+                image.getWidth(), image.getHeight());
+
+        Bitmap bitmap = BitmapFactory.decodeByteArray(data ,0,data.length);
+        final File out =  new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)+File.separator + "Tathastu/",name + ".png");
+        if(!out.getParentFile().exists()){
+            out.getParentFile().mkdirs();
+            snackbarHelper.showMessage(this,"created directory");
+        }
+
+
+        try{
+            FileOutputStream fos = new FileOutputStream(out);
+            bitmap.compress(Bitmap.CompressFormat.PNG,100,fos);
+            fos.flush();
+            fos.close();
+            snackbarHelper.showMessage(this,out.getName());
+        }catch (Exception e1){
+            snackbarHelper.showMessage(this , e1.getMessage());
+
+
+        }
+    }
+
+
 
 
 }
