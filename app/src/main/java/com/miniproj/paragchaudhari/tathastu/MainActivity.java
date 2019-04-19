@@ -12,22 +12,23 @@ public class MainActivity extends AppCompatActivity {
 
     private Button button,button4;
     private Button button2;
+    private Button Arcore_button,Knowledge_button,Navin_button,Compass_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button2 = (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
+        Knowledge_button = (Button) findViewById(R.id.Activity_Main_Knowledge_Button);
+        Knowledge_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openknowledge();
             }
         });
 
-        button = (Button) findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        Arcore_button = (Button) findViewById(R.id.Activity_main_ArVision_Button);
+        Arcore_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 arview(view);
@@ -36,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        button4 = (Button) findViewById(R.id.button10);
-        button4.setOnClickListener(new View.OnClickListener() {
+        Compass_button = (Button) findViewById(R.id.Activity_main_compass_button);
+        Compass_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v ) {
                 opencomp();
