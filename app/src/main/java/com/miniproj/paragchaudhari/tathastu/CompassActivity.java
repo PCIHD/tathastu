@@ -63,6 +63,7 @@ public class CompassActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listcompass);
         checkpermission();
@@ -162,6 +163,11 @@ public class CompassActivity extends AppCompatActivity {
     }
     private String generateFileName(String object){
         return  object + new SimpleDateFormat("yyyyMMddHHmmss", java.util.Locale.getDefault()).format(new Date());
+
+
+    }
+    private String generatePdfName(){
+        return  "Report" + new SimpleDateFormat("yyyyMMddHHmmss", java.util.Locale.getDefault()).format(new Date());
 
 
     }

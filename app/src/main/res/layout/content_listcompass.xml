@@ -1,4 +1,5 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/main_image_dial"
@@ -20,12 +22,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="247dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-150dp"
+        android:layout_marginStart="228dp"
         android:contentDescription="@string/compass_dial"
-        android:src="@drawable/dial" />
+        android:src="@drawable/dial"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="19dp" />
 
     <ImageView
         android:id="@+id/main_image_hands"
@@ -34,12 +35,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="254dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="-150dp"
+        android:layout_marginStart="236dp"
         android:contentDescription="@string/compass_hands"
-        android:src="@drawable/hands" />
+        android:src="@drawable/hands"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
 
 
     <TextView
@@ -61,17 +61,19 @@
 
     <ImageButton
         android:id="@+id/Compass_doorbutton"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignTop="@+id/fragment"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="419dp"
-        android:layout_marginEnd="177dp"
-        android:layout_marginBottom="268dp"
-        android:background="@drawable/vastu_door11" />
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/vastu_door11"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.67"
+        app:layout_constraintStart_toEndOf="@+id/fragment" />
 
     <ImageButton
         android:id="@+id/Compass_windowButton"
@@ -81,10 +83,12 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="475dp"
-        android:layout_marginEnd="183dp"
-        android:layout_marginBottom="219dp"
-        android:background="@drawable/vastu_window22" />
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/vastu_window22"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/fragment" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

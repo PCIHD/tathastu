@@ -19,13 +19,13 @@ import java.util.Date;
 public class Class_storedData {
 
     private String description_id,suggestion_id;
-    private int degree_label,room_id,object_id;
+    private int room_id,object_id;
     private Bitmap image_id;
     private String Acceptiblity_id;
-
+    private Float degree_label;
     private String object,room,File_name;
 
-    Class_storedData(int object ,int room ,int azimuth , Bitmap Image, String Acceptbility,String File){
+    Class_storedData(int object ,int room ,Float azimuth , Bitmap Image, String Acceptbility,String File){
         room_id = room;
         degree_label = azimuth;
         image_id = Image;

@@ -21,7 +21,7 @@ Return 1 : optimal
 public class Object_validity {
 
 
-    public void check_validation(int room, int object , int degree){
+    public int check_validation(int room, int object , int degree){
 
         switch(room) {
             case 1: // kitchen
@@ -30,16 +30,16 @@ public class Object_validity {
                         if (degree >= 135 && degree <= 225) return 1;
                         else if (degree >= 45 && degree <= 135) return 2;
                         else return 3;
-                        break;
+
 
 
                     case 2://window
                         if (degree >= 0 && degree <= 45) return 1;
                         else if (degree >= 235 && degree <= 305) return 2;
                         else return 3;
-                        break;
+
                 }
-                return;
+                return 0;
 
             case 2: // hall
                 switch (object) {
@@ -48,16 +48,16 @@ public class Object_validity {
                         else if (degree >= 45 && degree <= 135 || degree >= 225 && degree <= 305)
                             return 2;
                         else return 3;
-                        break;
+
 
                     case 2://window
                         if (degree >= 135 && degree <= 225) return 1;
                         else if (degree >= 45 && degree <= 135 || degree >= 225 && degree <= 305)
                             return 2;
                         else return 3;
-                        break;
+
                 }
-                return;
+                return 0;
 
 
             case 3: // bedroom
@@ -66,20 +66,20 @@ public class Object_validity {
                         if (degree >= 45 && degree <= 135) return 1;
                         else if (degree >= 135 && degree <= 225) return 2;
                         else return 3;
-                        break;
+
 
                     case 2://window
                         if (degree >= 235 && degree <= 305) return 1;
                         else if (degree >= 135 && degree <= 225) return 2;
                         else return 3;
-                        break;
+
                 }
-                return;
+                return 0;
 
 
             default:
-                return;
-            break;
+                return 0;
+
         }
 
     }
