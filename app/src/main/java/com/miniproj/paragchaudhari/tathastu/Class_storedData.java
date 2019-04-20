@@ -3,39 +3,46 @@ package com.miniproj.paragchaudhari.tathastu;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.pdf.PdfDocument;
 import android.os.Environment;
-import android.util.Log;
-import android.widget.Switch;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
-public class Class_storedData {
+final public  class Class_storedData {
+
+
+
+
 
     private String description_id,suggestion_id;
     private int room_id,object_id;
     private Bitmap image_id;
     private String Acceptiblity_id;
     private Float degree_label;
-    private String object,room,File_name;
+    private String room ,object,File_name;
 
-    Class_storedData(int object, int room,Float azimuth, Bitmap Image, String File){
+    private Context context;
+    private TextView  room_textview;
+
+
+
+   public Class_storedData(int obj, int room,Float azimuth, Bitmap Image, String File,Context activity){
         room_id = room;
         degree_label = azimuth;
         image_id = Image;
 
-        object_id = object;
+        object_id = obj;
         File_name  = File;
+        context = activity;
+       //Toast.makeText(context,"message",Toast.LENGTH_LONG).show();
     }
 
-    private String acceptiblity(int deg){
+    private static String acceptiblity(int deg){
         switch (deg){
             case 1: return "Perfect";
             case 2: return "Acceptable";
@@ -43,7 +50,7 @@ public class Class_storedData {
 
         }return "Acceptability Error";
     }
-    public void getDescription_id(){
+    public  void getDescription_id(){
        switch (room_id){
            case 1:  switch (object_id){
                case 1: object = "Door";
@@ -86,35 +93,45 @@ public class Class_storedData {
 
 
     public void generate_pdf() {
+
         PdfDocument report = new PdfDocument();
-        String directory_path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS) + "/Tathastu";
-        getDescription_id();
-
-
-        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(300, 600, 1).create();
-
+        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(1400,2500,1).create();
         PdfDocument.Page page = report.startPage(pageInfo);
-        Canvas canvas = page.getCanvas();
-        Paint paint = new Paint();
-        paint.setColor(Color.BLACK);
-        canvas.drawText(room, 150, 30, paint);
-        
 
 
+        LayoutInflater inflator = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        View content = inflator.inflate(R.layout.report_layout,null);
+        content.measure(1400,2500);
+        content.layout(0,0,1400,2500);
+        room_textview = (TextView) content.findViewById(R.id.room_name);
+        room_textview.setText(room);
+
+
+
+        content.draw(page.getCanvas());
         report.finishPage(page);
-        File file = new File(directory_path, File_name);
-        if (!file.getParentFile().exists()) {
-            file.getParentFile().mkdirs();
+        Toast.makeText(context,"Document created",Toast.LENGTH_LONG).show();
 
 
+
+        String directory_path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS) +"/Tathastu/";
+        File file = new File(directory_path);
+        if(!file.exists()){
+            file.mkdirs();
         }
-        try {
-            report.writeTo(new FileOutputStream(file));
-
-        } catch (Exception e1) {
-            Log.d("error in saving" , "Save error",e1);
+        String target = directory_path + "Report.pdf";
+        File filepath = new File(target);
+        Toast.makeText(context,target,Toast.LENGTH_LONG).show();
+        try{
+            report.writeTo(new FileOutputStream(filepath));
+        }catch (Exception e1){
+            Toast.makeText(context,e1.getMessage(),Toast.LENGTH_LONG).show();
+            report.close();
         }
-        report.close();
+
+
+
+
     }
 
 

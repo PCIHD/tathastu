@@ -1,7 +1,6 @@
 package com.miniproj.paragchaudhari.tathastu;
 
 import android.Manifest;
-
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,7 +10,6 @@ import android.graphics.YuvImage;
 import android.media.Image;
 import android.os.Bundle;
 import android.os.Environment;
-
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -19,20 +17,15 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.google.ar.core.Frame;
-
-
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-
 import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
 import java.text.SimpleDateFormat;
@@ -40,6 +33,7 @@ import java.util.Date;
 
 
 public class CompassActivity extends AppCompatActivity {
+
 
 
 
@@ -166,7 +160,7 @@ public class CompassActivity extends AppCompatActivity {
             Frame currentFrame = fragment.getArSceneView().getArFrame();
             Image currentImage = currentFrame.acquireCameraImage();
             String name = generateFileName("Door");
-            snackbarHelper.showMessageWithDismiss(this,name);
+           // snackbarHelper.showMessageWithDismiss(this,name);
             Save(currentImage , name);
             currentImage.close();
         }catch (Exception exception){
@@ -178,18 +172,24 @@ public class CompassActivity extends AppCompatActivity {
             Frame currentFrame = fragment.getArSceneView().getArFrame();
             Image currentImage = currentFrame.acquireCameraImage();
             String name = generateFileName("Window");
-            snackbarHelper.showMessageWithDismiss(this,name);
-            byte[] data = null;
-          /*  data = NV21toJPEG(YUV_420_888toNV21(currentImage),
-                    currentImage.getWidth(), currentImage.getHeight());
-            Bitmap bitmap = BitmapFactory.decodeByteArray(data ,0,data.length);
-            Class_storedData class_storedData = new Class_storedData(2,1,currentAzimuth,bitmap,generatePdfName());
-            snackbarHelper.showMessageWithDismiss(this,"Successfully savved id");
-            class_storedData.generate_pdf();
-            */
+            //snackbarHelper.showMessageWithDismiss(this,name);
+
+          try{
+              byte[] data = null;
+              data = NV21toJPEG(YUV_420_888toNV21(currentImage),
+                      currentImage.getWidth(), currentImage.getHeight());
+              Bitmap bitmap = BitmapFactory.decodeByteArray(data ,0,data.length);
+              Class_storedData class_storedData = new Class_storedData(1,1,currentAzimuth,bitmap,generatePdfName(),this);
+              class_storedData.generate_pdf();
 
 
-            Save( currentImage, name);
+          }catch (Exception e1){
+              Toast.makeText(this,e1.getMessage(),Toast.LENGTH_LONG);
+          }
+
+
+
+            //Save( currentImage, name);
             currentImage.close();
         }catch (Exception exception){
             snackbarHelper.showMessageWithDismiss(this,exception.getMessage());

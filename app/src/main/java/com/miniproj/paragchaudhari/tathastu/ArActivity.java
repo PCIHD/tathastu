@@ -38,6 +38,7 @@ public class ArActivity extends AppCompatActivity {
     private Button clear_object_button;
     private DrawerLayout drawerLayout;
 
+
     private NavigationView navigationView;
 
     @Override
