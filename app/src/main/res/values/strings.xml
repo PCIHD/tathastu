@@ -238,8 +238,8 @@
     <string name="title_activity_navigation_drawer_activity">Navigation_drawer_activity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Vastu Analysis</string>
+    <string name="nav_header_subtitle">Select the room for analysis</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="title_activity_listcompass">listcompass</string>
     <string name="Kitchen_door">Darvaza kitchen ka</string>
@@ -248,5 +248,7 @@
     <string name="Kitchen_Window">Khidkee kitchen ka</string>
     <string name="Hall_Window">Khidkee Hall ka</string>
     <string name="Bedroom_Window">Khidkee Bedroom ka</string>
+
+    <string name="report"></string>
 
 </resources>
