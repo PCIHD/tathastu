@@ -9,8 +9,7 @@ Return 1 : optimal
        3:  unacceptable
 
 
-*/
- */
+
 public class Object_validity {
 
 
@@ -29,3 +28,4 @@ public class Object_validity {
     }
 
 }
+ */

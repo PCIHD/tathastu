@@ -60,7 +60,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void opencomp(){
-        Intent intent =new Intent(this,CompassActivity.class);
+        Intent intent =new Intent(this,listview.class);
+        startActivity(intent);
+    }
+
+    public void openlist(){
+        Intent intent =new Intent(this,listview.class);
         startActivity(intent);
     }
 

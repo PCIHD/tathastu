@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <Button
+    <ImageButton
         android:id="@+id/Compass_doorbutton"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -55,13 +55,13 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="340dp"
+        android:layout_marginStart="300dp"
         android:layout_marginTop="606dp"
         android:layout_marginEnd="17dp"
         android:layout_marginBottom="81dp"
-        android:background="@drawable/door_vastu" />
+        android:background="@drawable/vastu_door11" />
 
-    <Button
+    <ImageButton
         android:id="@+id/Compass_windowButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -69,10 +69,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="340dp"
+        android:layout_marginStart="300dp"
         android:layout_marginTop="662dp"
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/window_vastu" />
+        android:background="@drawable/vastu_window22" />
 
 </RelativeLayout>

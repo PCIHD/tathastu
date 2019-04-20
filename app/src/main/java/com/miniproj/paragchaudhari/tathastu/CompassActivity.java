@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,7 +42,7 @@ public class CompassActivity extends AppCompatActivity {
     private static final String REQUIRED_PERMISSIONS[] = { Manifest.permission.WRITE_EXTERNAL_STORAGE,
     Manifest.permission.CAMERA};
     private Custom_arFragment fragment;
-    private Button door_button,window_button;
+    private ImageButton door_button,window_button;
     SnackbarHelper snackbarHelper = new SnackbarHelper();
 
     private static final String TAG = "CompassActivity";
@@ -69,8 +70,8 @@ public class CompassActivity extends AppCompatActivity {
 
 
 
-        door_button = (Button) findViewById(R.id.Compass_doorbutton);
-        window_button=(Button) findViewById(R.id.Compass_windowButton);
+        door_button = (ImageButton) findViewById(R.id.Compass_doorbutton);
+        window_button=(ImageButton) findViewById(R.id.Compass_windowButton);
         door_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
