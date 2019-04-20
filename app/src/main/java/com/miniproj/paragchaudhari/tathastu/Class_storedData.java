@@ -1,6 +1,5 @@
 package com.miniproj.paragchaudhari.tathastu;
 
-import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -9,13 +8,9 @@ import android.graphics.Paint;
 import android.graphics.pdf.PdfDocument;
 import android.os.Environment;
 import android.util.Log;
-import android.widget.Switch;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Class_storedData {
 
@@ -26,11 +21,10 @@ public class Class_storedData {
     private Float degree_label;
     private String object,room,File_name;
 
-    Class_storedData(int object, int room,Float azimuth, Bitmap Image, String File){
+    Class_storedData(int object, int room, float azimuth, Bitmap Image, String File){
         room_id = room;
         degree_label = azimuth;
         image_id = Image;
-
         object_id = object;
         File_name  = File;
     }
