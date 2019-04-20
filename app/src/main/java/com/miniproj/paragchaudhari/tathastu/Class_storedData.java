@@ -1,12 +1,12 @@
 package com.miniproj.paragchaudhari.tathastu;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.pdf.PdfDocument;
 import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,19 +19,25 @@ final public  class Class_storedData {
 
 
 
-    private String description_id,suggestion_id;
+    private String suggestion_id;
     private int room_id,object_id;
     private Bitmap image_id;
     private String Acceptiblity_id;
-    private Float degree_label;
+    private float degree_label;
     private String room ,object,File_name;
 
     private Context context;
     private TextView  room_textview;
+    private ImageView object_image;
+    
 
 
+/*
 
-   public Class_storedData(int obj, int room,Float azimuth, Bitmap Image, String File,Context activity){
+FUnction getSuggestion created , add logic for the suggestion there , add necessary paramaters
+
+ */
+   public Class_storedData(int obj, int room,float azimuth, Bitmap Image, String File,Context activity){
         room_id = room;
         degree_label = azimuth;
         image_id = Image;
@@ -50,49 +56,49 @@ final public  class Class_storedData {
 
         }return "Acceptability Error";
     }
-    public  void getDescription_id(){
+   private void getDescription_id(){
+
+       Acceptiblity_id = acceptiblity(check_validation(room_id,object_id,degree_label));
+       Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
        switch (room_id){
-           case 1:  switch (object_id){
-               case 1: object = "Door";
+           case 1:switch (object_id){
+               case 1:  suggestion_id = getSuggestion();
+                        room = "Kitchen";
+                        object = "Door";
+               return;
+               case 2:suggestion_id = getSuggestion();
                    room = "Kitchen";
-                        suggestion_id =  Resources.getSystem().getString(R.string.Kitchen_door);
-                        Object_validity validity = new Object_validity() ;
-                        Acceptiblity_id = acceptiblity(validity.check_validation(1,1,degree_label));
-
-
-                room = "Kitchen";
-               break;
-               case 2:
-                   object = "Window";
-                   room = "Kitchen";
-                   suggestion_id =  Resources.getSystem().getString(R.string.Kitchen_Window);
-
-                   break;}
-           case 2:  switch (object_id){
-               case 1:object = "Door";
+                   object = "Window";   break;
+               default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
+           }return;
+           case 2:switch (object_id){
+               case 1:suggestion_id = getSuggestion();
                    room = "Hall";
-                   suggestion_id =  Resources.getSystem().getString(R.string.Hall_door);
-                   break;
-               case 2:object = "Window";
+                   object = "Door";
+                   return;
+               case 2: suggestion_id = getSuggestion();
                    room = "Hall";
-                   suggestion_id =  Resources.getSystem().getString(R.string.Hall_Window);
-                   break;}
-           case 3:  switch (object_id){
-               case 1: object = "Door";
+                   object = "Window";;
+                  return;
+               default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
+           }return;
+           case 3:switch (object_id){
+               case 1: suggestion_id = getSuggestion();
                    room = "Bedroom";
-                   suggestion_id =  Resources.getSystem().getString(R.string.Bedroom_Window);
-                   break;
-               case 2:object = "Window";
-                   room = "Bedroom";
-                   suggestion_id =  Resources.getSystem().getString(R.string.Bedroom_door);
-                   break;}
+                   object = "Door";
+               return;
+               case 2: suggestion_id = getSuggestion();
 
-           }
-
+                   return;
+               default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
+           }return;
        }
+   }
 
 
     public void generate_pdf() {
+       getDescription_id();
+
 
         PdfDocument report = new PdfDocument();
         PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(1400,2500,1).create();
@@ -101,10 +107,16 @@ final public  class Class_storedData {
 
         LayoutInflater inflator = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View content = inflator.inflate(R.layout.report_layout,null);
-        content.measure(1400,2500);
-        content.layout(0,0,1400,2500);
+        int measureWidth = View.MeasureSpec.makeMeasureSpec(page.getCanvas().getWidth(),View.MeasureSpec.EXACTLY);
+        int measuredHeight = View.MeasureSpec.makeMeasureSpec(page.getCanvas().getHeight(), View.MeasureSpec.EXACTLY);
+
+        content.measure(measureWidth, measuredHeight);
+        content.layout(0, 0, page.getCanvas().getWidth(), page.getCanvas().getHeight());
+
         room_textview = (TextView) content.findViewById(R.id.room_name);
         room_textview.setText(room);
+        object_image = (ImageView) content.findViewById(R.id.Room_image);
+        object_image.setImageBitmap(image_id);
 
 
 
@@ -133,8 +145,74 @@ final public  class Class_storedData {
 
 
     }
+    private String getSuggestion(){
+       String value = "";
+       return value;
+    }
+
+    private int check_validation(int room, int object , float degree){
+
+        switch(room) {
+            case 1: // kitchen
+                switch (object) {
+                    case 1://door
+                        if (degree >= 135 && degree <= 225)
+                        {return 1;}
+                        else if (degree >= 45 && degree <= 135) {return 2;}
+                        else return 3;
 
 
+
+                    case 2://window
+                        if (degree >= 0 && degree <= 45) return 1;
+                        else if (degree >= 235 && degree <= 305) return 2;
+                        else return 3;
+
+                }
+                return 0;
+
+            case 2: // hall
+                switch (object) {
+                    case 1://door
+                        if (degree >= 135 && degree <= 225) return 1;
+                        else if (degree >= 45 && degree <= 135 || degree >= 225 && degree <= 305)
+                            return 2;
+                        else return 3;
+
+
+                    case 2://window
+                        if (degree >= 135 && degree <= 225) return 1;
+                        else if (degree >= 45 && degree <= 135 || degree >= 225 && degree <= 305)
+                            return 2;
+                        else return 3;
+
+                }
+                return 0;
+
+
+            case 3: // bedroom
+                switch (object) {
+                    case 1://door
+                        if (degree >= 45 && degree <= 135) return 1;
+                        else if (degree >= 135 && degree <= 225) return 2;
+                        else return 3;
+
+
+                    case 2://window
+                        if (degree >= 235 && degree <= 305) return 1;
+                        else if (degree >= 135 && degree <= 225) return 2;
+                        else return 3;
+
+                }
+                return 0;
+
+
+            default:
+                return 0;
+
+        }
+
+    }
 
 
 
