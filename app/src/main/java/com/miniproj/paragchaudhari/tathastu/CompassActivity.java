@@ -69,15 +69,6 @@ public class CompassActivity extends AppCompatActivity {
         checkpermission();
         fragment = (Custom_arFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
         fragment.getPlaneDiscoveryController().hide();
-
-
-
-
-
-
-
-
-
         door_button = (ImageButton) findViewById(R.id.Compass_doorbutton);
         window_button=(ImageButton) findViewById(R.id.Compass_windowButton);
         door_button.setOnClickListener(new View.OnClickListener() {
@@ -132,8 +123,7 @@ public class CompassActivity extends AppCompatActivity {
     }
 
     private void adjustArrow(float azimuth) {
-        Log.d(TAG, "will set rotation from " + currentAzimuth + " to "
-                + azimuth);
+    //    Log.d(TAG, "will set rotation from " + currentAzimuth + " to "+ azimuth);
 
         Animation an = new RotateAnimation(-currentAzimuth, -azimuth,
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
@@ -189,10 +179,20 @@ public class CompassActivity extends AppCompatActivity {
             Image currentImage = currentFrame.acquireCameraImage();
             String name = generateFileName("Window");
             snackbarHelper.showMessageWithDismiss(this,name);
+            byte[] data = null;
+          /*  data = NV21toJPEG(YUV_420_888toNV21(currentImage),
+                    currentImage.getWidth(), currentImage.getHeight());
+            Bitmap bitmap = BitmapFactory.decodeByteArray(data ,0,data.length);
+            Class_storedData class_storedData = new Class_storedData(2,1,currentAzimuth,bitmap,generatePdfName());
+            snackbarHelper.showMessageWithDismiss(this,"Successfully savved id");
+            class_storedData.generate_pdf();
+            */
+
+
             Save( currentImage, name);
             currentImage.close();
         }catch (Exception exception){
-            snackbarHelper.showMessageWithDismiss(this,"Error Acquiring image");
+            snackbarHelper.showMessageWithDismiss(this,exception.getMessage());
         }
     }
     private static byte[] NV21toJPEG(byte[] nv21, int width, int height) {
