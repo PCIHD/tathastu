@@ -21,7 +21,7 @@ Return 1 : optimal
 public class Object_validity {
 
 
-    public int check_validation(int room, int object , int degree){
+    public int check_validation(int room, int object , Float degree){
 
         switch(room) {
             case 1: // kitchen
