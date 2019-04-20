@@ -1,6 +1,5 @@
 package com.miniproj.paragchaudhari.tathastu;
 
-import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -8,24 +7,22 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.pdf.PdfDocument;
 import android.os.Environment;
-import android.widget.Switch;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Class_storedData {
 
     private String description_id,suggestion_id;
-    private int room_id,object_id;
+    private int degree_label,room_id,object_id;
     private Bitmap image_id;
     private String Acceptiblity_id;
-    private Float degree_label;
     private String object,room,File_name;
 
-    Class_storedData(int object ,int room ,Float azimuth , Bitmap Image, String Acceptbility,String File){
+
+
+
+    Class_storedData(int object ,int room ,int azimuth , Bitmap Image, String Acceptbility,String File){
         room_id = room;
         degree_label = azimuth;
         image_id = Image;
