@@ -1,9 +1,9 @@
 package com.github.florent37.camerafragment.internal.timer;
 
+import com.github.florent37.camerafragment.internal.utils.DateTimeUtils;
+
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
-
-import com.github.florent37.camerafragment.internal.utils.DateTimeUtils;
 
 /*
  * Created by florentchampigny on 13/01/2017.

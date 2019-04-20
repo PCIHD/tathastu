@@ -2,9 +2,9 @@ package com.github.florent37.camerafragment.internal.ui.model;
 
 import android.media.CamcorderProfile;
 
-import java.util.concurrent.TimeUnit;
-
 import com.github.florent37.camerafragment.configuration.Configuration;
+
+import java.util.concurrent.TimeUnit;
 
 /*
  * Created by memfis on 12/1/16.
