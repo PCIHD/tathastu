@@ -10,8 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private Button button,button4;
-    private Button button2;
+
     private Button Arcore_button,Knowledge_button,Navin_button,Compass_button;
 
     @Override
@@ -64,9 +63,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openlist(){
-        Intent intent =new Intent(this,listview.class);
-        startActivity(intent);
-    }
+   
 
 }

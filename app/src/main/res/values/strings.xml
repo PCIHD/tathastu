@@ -242,4 +242,11 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="title_activity_listcompass">listcompass</string>
+    <string name="Kitchen_door">Darvaza kitchen ka</string>
+    <string name="Hall_door">Darvaza hall ka</string>
+    <string name="Bedroom_door">Darvaza kitchen ka</string>
+    <string name="Kitchen_Window">Khidkee kitchen ka</string>
+    <string name="Hall_Window">Khidkee Hall ka</string>
+    <string name="Bedroom_Window">Khidkee Bedroom ka</string>
+
 </resources>

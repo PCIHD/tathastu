@@ -41,15 +41,15 @@ import java.util.Date;
 
 public class CompassActivity extends AppCompatActivity {
 
-    listview l = new listview();
+
 
     private static final String REQUIRED_PERMISSIONS[] = { Manifest.permission.WRITE_EXTERNAL_STORAGE,
     Manifest.permission.CAMERA};
     private Custom_arFragment fragment;
     private ImageButton door_button,window_button;
     SnackbarHelper snackbarHelper = new SnackbarHelper();
-    private int room=l.getReturning();
-    String r = Integer.toString(room);
+
+
 
 
     private static final String TAG = "CompassActivity";
@@ -72,7 +72,7 @@ public class CompassActivity extends AppCompatActivity {
 
 
 
-    Toast.makeText(this,r, Toast.LENGTH_LONG).show();
+
 
 
 
