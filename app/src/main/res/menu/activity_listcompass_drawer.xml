@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Hall" />
+            android:id="@+id/nav_hall"
+            android:title="Hall"/>
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:id="@+id/nav_kitchen"
             android:title="Kitchen" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:id="@+id/nav_bedroom"
             android:title="Bedroom" />
+        <item
+            android:id="@+id/nav_study_room"
+            android:title="Study Room" />
+        <item
+            android:id="@+id/nav_bathroom"
+            android:title="Bathroom" />
+        <item
+            android:id="@+id/nav_master_bedroom"
+            android:title="Master Bedroom" />
 
     </group>
 
