@@ -170,11 +170,11 @@ public class CompassActivity extends AppCompatActivity {
             Frame currentFrame = fragment.getArSceneView().getArFrame();
             Image currentImage = currentFrame.acquireCameraImage();
             String name = generateFileName("Door");
-            snackbarHelper.showMessage(this,name);
+            snackbarHelper.showMessageWithDismiss(this,name);
             Save(currentImage , name);
             currentImage.close();
         }catch (Exception exception){
-            snackbarHelper.showMessage(this,"Error Acquiring image");
+            snackbarHelper.showMessageWithDismiss(this,"Error Acquiring image");
         }
     }
     private void takeWindowPhoto(){
@@ -182,11 +182,11 @@ public class CompassActivity extends AppCompatActivity {
             Frame currentFrame = fragment.getArSceneView().getArFrame();
             Image currentImage = currentFrame.acquireCameraImage();
             String name = generateFileName("Window");
-            snackbarHelper.showMessage(this,name);
+            snackbarHelper.showMessageWithDismiss(this,name);
             Save( currentImage, name);
             currentImage.close();
         }catch (Exception exception){
-            snackbarHelper.showMessage(this,"Error Acquiring image");
+            snackbarHelper.showMessageWithDismiss(this,"Error Acquiring image");
         }
     }
     private static byte[] NV21toJPEG(byte[] nv21, int width, int height) {
@@ -224,7 +224,7 @@ public class CompassActivity extends AppCompatActivity {
         final File out =  new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)+File.separator + "Tathastu/",name + ".png");
         if(!out.getParentFile().exists()){
             out.getParentFile().mkdirs();
-            snackbarHelper.showMessage(this,"created directory");
+            snackbarHelper.showMessageWithDismiss(this,"created directory");
         }
 
 
@@ -233,9 +233,9 @@ public class CompassActivity extends AppCompatActivity {
             bitmap.compress(Bitmap.CompressFormat.PNG,100,fos);
             fos.flush();
             fos.close();
-            snackbarHelper.showMessage(this,out.getName());
+            snackbarHelper.showMessageWithDismiss(this,out.getName());
         }catch (Exception e1){
-            snackbarHelper.showMessage(this , e1.getMessage());
+            snackbarHelper.showMessageWithDismiss(this , e1.getMessage());
 
 
         }
