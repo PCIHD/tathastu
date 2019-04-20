@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 public class listview extends AppCompatActivity {
     ListView listView;
-    public int returning;
+    public int ret;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +33,11 @@ public class listview extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 if (position == 0) {
+                    ret=1;
+                    getReturning();
                     Intent myIntent = new Intent(view.getContext(), CompassActivity.class);
                     startActivityForResult(myIntent, 0);
-                    returning=1;
-                    getReturning();
+                    ;
 
                 }
 
@@ -79,7 +80,7 @@ public class listview extends AppCompatActivity {
     }
 
     public int getReturning() {
-        return returning;
+        return ret;
     }
 
 }

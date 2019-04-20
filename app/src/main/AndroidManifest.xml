@@ -18,7 +18,7 @@
         android:roundIcon="@drawable/palm"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".listviewactivity2"></activity>
+        <activity android:name=".listviewactivity2" />
         <activity android:name=".know9" />
         <activity android:name=".know8" />
         <activity android:name=".know7" />
@@ -28,9 +28,8 @@
         <activity android:name=".know3" />
         <activity android:name=".know2" />
         <activity android:name=".know1" />
-        <activity android:name=".listview"/>
-        <activity android:name=".listitemactivity1"/>
-
+        <activity android:name=".listview" />
+        <activity android:name=".listitemactivity1" />
         <activity android:name=".knowledge" />
         <activity android:name=".MainActivity">
             <intent-filter>
