@@ -27,9 +27,10 @@ final public  class Class_storedData {
     private String room ,object,File_name;
 
     private Context context;
-    private TextView  room_textview;
+    private TextView  room_textview,acceptiblity_textview,suggestion_textview;
     private ImageView object_image;
-    
+    PdfDocument report = new PdfDocument();
+
 
 
 /*
@@ -45,6 +46,7 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
         object_id = obj;
         File_name  = File;
         context = activity;
+
        //Toast.makeText(context,"message",Toast.LENGTH_LONG).show();
     }
 
@@ -98,9 +100,15 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
 
     public void generate_pdf() {
        getDescription_id();
+        String directory_path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS) +"/Tathastu/";
+        File file = new File(directory_path);
+        String target = directory_path + "Report.pdf";
+        File filepath = new File(target);
 
 
-        PdfDocument report = new PdfDocument();
+
+
+
         PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(1400,2500,1).create();
         PdfDocument.Page page = report.startPage(pageInfo);
 
@@ -117,6 +125,10 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
         room_textview.setText(room);
         object_image = (ImageView) content.findViewById(R.id.Room_image);
         object_image.setImageBitmap(image_id);
+        acceptiblity_textview = (TextView) content.findViewById(R.id.acceptability);
+        acceptiblity_textview.setText(Acceptiblity_id);
+        suggestion_textview = (TextView) content.findViewById(R.id.suggestions);
+        suggestion_textview.setText(suggestion_id);
 
 
 
@@ -126,13 +138,12 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
 
 
 
-        String directory_path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS) +"/Tathastu/";
-        File file = new File(directory_path);
+
+
         if(!file.exists()){
             file.mkdirs();
         }
-        String target = directory_path + "Report.pdf";
-        File filepath = new File(target);
+
         Toast.makeText(context,target,Toast.LENGTH_LONG).show();
         try{
             report.writeTo(new FileOutputStream(filepath));

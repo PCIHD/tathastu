@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.ImageFormat;
+import android.graphics.Matrix;
 import android.graphics.Rect;
 import android.graphics.YuvImage;
 import android.media.Image;
@@ -42,6 +43,7 @@ public class CompassActivity extends AppCompatActivity {
     private Custom_arFragment fragment;
     private ImageButton door_button,window_button;
     SnackbarHelper snackbarHelper = new SnackbarHelper();
+    private int Room;
 
 
 
@@ -161,7 +163,8 @@ public class CompassActivity extends AppCompatActivity {
             Image currentImage = currentFrame.acquireCameraImage();
             String name = generateFileName("Door");
            // snackbarHelper.showMessageWithDismiss(this,name);
-            Save(currentImage , name);
+            process_Image(currentImage,1);
+            //Save(currentImage , name);
             currentImage.close();
         }catch (Exception exception){
             snackbarHelper.showMessageWithDismiss(this,"Error Acquiring image");
@@ -173,19 +176,7 @@ public class CompassActivity extends AppCompatActivity {
             Image currentImage = currentFrame.acquireCameraImage();
             String name = generateFileName("Window");
             //snackbarHelper.showMessageWithDismiss(this,name);
-
-          try{
-              byte[] data = null;
-              data = NV21toJPEG(YUV_420_888toNV21(currentImage),
-                      currentImage.getWidth(), currentImage.getHeight());
-              Bitmap bitmap = BitmapFactory.decodeByteArray(data ,0,data.length);
-              Class_storedData class_storedData = new Class_storedData(1,1,currentAzimuth,bitmap,generatePdfName(),this);
-              class_storedData.generate_pdf();
-
-
-          }catch (Exception e1){
-              Toast.makeText(this,e1.getMessage(),Toast.LENGTH_LONG);
-          }
+            process_Image(currentImage,2);
 
 
 
@@ -257,6 +248,26 @@ public class CompassActivity extends AppCompatActivity {
         }
     }
 
+    private void process_Image(Image currentImage,int obj){
+        try{
+            byte[] data = null;
+            data = NV21toJPEG(YUV_420_888toNV21(currentImage),
+                    currentImage.getWidth(), currentImage.getHeight());
 
+            Matrix matrix = new Matrix();
+            matrix.postRotate(90);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(data ,0,data.length);
+            Bitmap scaled = Bitmap.createScaledBitmap(bitmap,140,140,false);
+            Bitmap rotated = Bitmap.createBitmap(scaled,0,0,scaled.getWidth(),scaled.getHeight(),matrix,true);
+
+            Class_storedData class_storedData = new Class_storedData(obj,Room,currentAzimuth,rotated,generatePdfName(),this);
+            class_storedData.generate_pdf();
+
+
+        }catch (Exception e1){
+            Toast.makeText(this,e1.getMessage(),Toast.LENGTH_LONG);
+        }
+
+    }
 
 }
