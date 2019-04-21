@@ -235,6 +235,7 @@
         location of the bathroom, toilet or utility rooms. Due to this,
         the educational issues start raising its head and the most vulnerable of the students get affected. \n
     </string>
+
     <string name="title_activity_navigation_drawer_activity">Navigation_drawer_activity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -249,6 +250,180 @@
     <string name="Hall_Window">Khidkee Hall ka</string>
     <string name="Bedroom_Window">Khidkee Bedroom ka</string>
 
-    <string name="report"></string>
+    <string name="bedroom_description">Room: BEDROOM   \n\n
+
+NORTH    \n
+
+FAVOURABLE  \n
+
+	North side is suitable for attached bathroom   \n
+	North side is suitable for   changing room or bath tub etc.   \n
+	North is one of the best spot for entrance door     \n
+
+UNFAVOURABLE    \n
+	Bed not favourable in North Direction   \n\ n
+
+East          \n
+Favourable    \n
+	East is also favourable for entrance door   \n
+	Having windows in East is great.  (Sunlight)    \n
+
+Unfavourable   \n
+	East direction is unfavourable for changing room.   \n
+	Placing safe and Wardrobe in East  is not good.   \n\n
+
+West    \n
+Favourable    \n
+	West is average for entrance door(Sometimes)     \n
+	Avoid having bathroom completely in west .(South west will be okay)   \n
+
+Unfavourable   \n
+	Having windows in West is not good. (Sunlight)     \n
+	East direction is unfavourable for changing room.   \n
+	Also for placing Bed.   \n\n
+
+
+SOUTH   \n
+
+FAVOURABLE     \n
+
+	South side is suitable for attached bathroom     \n
+	South side is suitable for  Safe and wardrobe.(opening towards North)    \n
+	South is one of the best spot for Bed.   \n
+
+UNFAVOURABLE   \n
+	Entrance door not favourable in South Direction   \n\n
+</string>
+
+    <string name="Hall_description">Room: HALL   \n\n
+
+NORTH      \n
+
+FAVOURABLE   \n
+
+	North side is suitable placing Clock    \n
+	North side is suitable for   windows also      \n
+	North is one of the best spot for entrance door, also main door.    \n
+
+UNFAVOURABLE   \n
+	Bed not favourable to have another connected door in this direction    \n\n
+
+East   \n
+Favourable    \n
+	East is also favourable for entrance door     \n
+	Having windows in East is great.  (Sunlight)    \n
+	Also favourable for worshiping  god (if present)   \n
+
+Unfavourable  \n
+	East direction is unfavourable for T.V. and stuff.   \n\n
+
+West  \n
+Favourable    \n
+	West is average for entrance door(Sometimes)      \n
+	Avoid having connected rooms completely in west .(South west will be okay)   \n
+
+Unfavourable   \n
+	Having windows in West is not good.
+(Sunlight)   \n\n
+
+
+SOUTH   \n
+
+FAVOURABLE   \n
+
+	South side is suitable for attached bathroom   \n
+	South side is suitable for   safe and wardrobe.    \n
+	Furniture and decoration, etc.   \n
+
+UNFAVOURABLE    \n
+	Entrance door not favourable in South Direction    \n\n
+</string>
+
+
+    <string name="Study_room_description">Room: STUDY ROOM    \n\n
+
+NORTH   \n
+
+FAVOURABLE     \n
+
+	North side is suitable placing Clock    \n
+	North side is suitable for   windows also     \n
+	North is one of the best spot for entrance door, also main door.     \n
+
+UNFAVOURABLE    \n
+	Not favourable for study table    \n
+	Not favourable for bookshelf      \n\n
+
+East    \n
+Favourable     \n
+	East is also favourable for entrance door    \n
+	Having windows in East is great. (Sunlight)    \n
+	Also favourable for study table.(facing east)     \n\n
+
+
+West    \n
+Favourable     \n
+	West is average for entrance door(Sometimes)    \n
+	Avoid having connected rooms completely in west .(South west will be okay)        \n
+
+Unfavourable   \n
+	Having windows in West is not good.(Sunlight)     \n\n
+
+
+SOUTH      \n
+
+FAVOURABLE     \n
+
+	South side is suitable for attached bathroom    \n
+	South side is suitable for   safe and wardrobe.    \n
+	Furniture and decoration, etc.    \n
+
+UNFAVOURABLE    \n
+	Entrance door not favourable in South Direction     \n
+	Not favourable for study table and bookshelf      \n\n
+</string>
+
+
+    <string name="kitchen_description">Room: KITCHEN   \n\n
+
+NORTH    \n
+
+FAVOURABLE   \n
+
+	North – East  side is suitable for attached bathroom or wash basin   \n
+	North side is suitable for   storing food.   \n
+	North is one of the best spot for entrance in kitchen     \n
+
+UNFAVOURABLE    \n
+	Fridge and other electronic gadgets not favourable in North Direction   \n\ n
+
+East          \n
+Favourable    \n
+	East is also favourable for entrance of Kitchen   \n
+	Having windows in East is great.  (Sunlight)    \n
+	Marble platform of Kitchen should be in East.  \n
+
+Unfavourable   \n
+	East direction is unfavourable Electronic gadgets and Shelf of Utensils.   \n\n
+
+West    \n
+Favourable    \n
+	West is average for entering Kitchen (Sometimes)     \n
+	West   is good for storing   groceries.      \n
+Unfavourable   \n
+	Having windows in West is not good. (Sunlight)     \n
+	West direction is unfavourable for Kitchen Platform.   \n
+	Also, unfavourable  for  having  a wash basin in West.   \n\n
+
+
+SOUTH   \n
+
+FAVOURABLE     \n
+
+	South side is suitable for attached bathroom  or for having a connected room    \n
+
+UNFAVOURABLE   \n
+	Entrance door not favourable sometimes, depends on   various scenarios.   \n\n
+</string>
 
 </resources>
