@@ -607,10 +607,12 @@ The image of window captured in your Study room is in north direction which is r
 As window in east is perfect and there’s no need to change window.\n\n
 </string>
 
-    <string name="studyroom_window_good">
-The image of window captured in your Study room is in west direction which is good and has neutral effect .   \n
-As window in west does not give you sunlight and airflow continuously in day time.\n\n
+    <string name="studyroom_window_good1">
+The image of window captured in your Study room is in West with East opening, this direction is really average and the effect of vastu is neutral.   \n
+As door opening in east is okay not perfect but can work.\n\n
 </string>
+
+
 
     <string name="studyroom_window_bad">
 The image of window captured in your Study room is in South direction which is not good and has negative effect .   \n

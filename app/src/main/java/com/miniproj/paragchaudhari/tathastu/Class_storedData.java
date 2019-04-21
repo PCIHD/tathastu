@@ -1,4 +1,5 @@
 package com.miniproj.paragchaudhari.tathastu;
+// context.getString(R.string.stringname);
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -16,20 +17,20 @@ import java.io.FileOutputStream;
 final public  class Class_storedData {
 
 
-
-
-
     private String suggestion_id;
     private int room_id,object_id;
+    private String description_id;
     private Bitmap image_id;
     private String Acceptiblity_id;
     private float degree_label;
     private String room ,object,File_name;
 
     private Context context;
-    private TextView  room_textview,acceptiblity_textview,acceptiblity_textview1,suggestion_textview;
+    private TextView  room_textview,acceptiblity_textview,acceptiblity_textview1,acceptibility_textview2,suggestion_textview;
     private ImageView object_image;
     PdfDocument report = new PdfDocument();
+
+
 
 
 
@@ -42,60 +43,60 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
         room_id = room;
         degree_label = azimuth;
         image_id = Image;
-
         object_id = obj;
         File_name  = File;
         context = activity;
 
+
+
        //Toast.makeText(context,"message",Toast.LENGTH_LONG).show();
     }
 
-    private static String acceptiblity(int deg){
+    private static String acceptiblity(String deg){
         switch (deg){
-            case 1: return "Perfect";
-            case 2: return "Acceptable";
-            case 3:return "Poor";
+            case "1": return "Perfect";
+            case "2": return "Acceptable";
+            case "3":return "Poor";
 
         }return "Acceptability Error";
     }
-   private void getDescription_id(){
+        private void getDescription_id(){
 
-       Acceptiblity_id = acceptiblity(check_validation(room_id,object_id,degree_label));
+       Acceptiblity_id = (String) check_validation(room_id,object_id,degree_label);
        Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
        switch (room_id){
            case 1:switch (object_id){
                case 1:
                         room = "Kitchen";
                         object = "Door";
-                        suggestion_id = getSuggestion();
-
                return;
-               case 2:suggestion_id = getSuggestion();
+               case 2:
                    room = "Kitchen";
                    object = "Window";   break;
                default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
 
            }
-               return;
+
+                return;
            case 2:switch (object_id){
-               case 1:suggestion_id = getSuggestion();
+               case 1:
                    room = "Hall";
                    object = "Door";
                    return;
-               case 2: suggestion_id = getSuggestion();
+               case 2:
                    room = "Hall";
                    object = "Window";;
                   return;
                default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
            }return;
            case 3:switch (object_id){
-               case 1: suggestion_id = getSuggestion();
+               case 1:
                    room = "Bedroom";
                    object = "Door";
                return;
                case 2: room = "Bedroom";
                    object = "Window";
-                   suggestion_id = getSuggestion();
+
 
                    return;
                default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
@@ -128,6 +129,7 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
         content.layout(0, 0, page.getCanvas().getWidth(), page.getCanvas().getHeight());
 
         String numberAsString = Float.toString(degree_label);
+        String deg = getDegreeLabel();
 
         room_textview = (TextView) content.findViewById(R.id.room_name);
         room_textview.setText(room);
@@ -139,6 +141,11 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
         suggestion_textview.setText(suggestion_id);
         acceptiblity_textview1 = (TextView) content.findViewById(R.id.degree_val);
         acceptiblity_textview1.setText(numberAsString);
+        acceptibility_textview2 = (TextView) content.findViewById(R.id.direction);
+        acceptibility_textview2.setText(deg);
+
+
+
 
 
 
@@ -166,70 +173,123 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
 
 
     }
+
+    private String getDegreeLabel() {
+        if(degree_label>=0 && degree_label<=45) return "N";
+        if(degree_label>=45 && degree_label<=90) return "NE";
+        if(degree_label>=90 && degree_label<=135) return "E";
+        if(degree_label>=135 && degree_label<=180) return "SE";
+        if(degree_label>=180 && degree_label<=225) return "S";
+        if(degree_label>=225 && degree_label<=270) return "SW";
+        if(degree_label>=270 && degree_label<=315) return "W";
+        if(degree_label>=315 && degree_label<=360) return "NW";
+        return null;
+    }
+
     private String getSuggestion(){
        String value = "";
        return value;
     }
 
-    private int check_validation(int room, int object , float degree){
+    private String getDescriptionId(){
+        String value = "";
+        return value;
+    }
+
+    private String check_validation(int room, int object , float degree){
 
         switch(room) {
-            case 1: // kitchen
+          case 1: // kitchen
                 switch (object) {
                     case 1://door
-                        if (degree >= 135 && degree <= 225)
-                        {return 1;}
-                        else if (degree >= 45 && degree <= 135) {return 2;}
-                        else return 3;
+                        if (degree >= 0 && degree <= 90)
+                        {return context.getString(R.string.kitchen_door_perfect);}
+                        else if (degree >= 250 && degree <= 315) {
+                            return context.getString(R.string.kitchen_door_good1);
+                        }
+                        else if (degree >= 45 && degree <= 135) {
+                            return context.getString(R.string.kitchen_door_good2);
+                        }
+                        else if (degree >= 135 && degree <= 225) {
+                            return context.getString(R.string.kitchen_door_bad);
+                        }
+                        else return context.getString(R.string.default_direction);
 
 
 
                     case 2://window
-                        if (degree >= 0 && degree <= 45) return 1;
-                        else if (degree >= 235 && degree <= 305) return 2;
-                        else return 3;
+                        if (degree >= 45 && degree <= 90) return context.getString(R.string.kitchen_window_perfect);
+                        else if (degree >= 90 && degree <= 135) return context.getString(R.string.kitchen_window_good1);
+                        else if (degree >= 0 && degree <= 45) return context.getString(R.string.kitchen_window_good2);
+                        else if (degree >= 235 && degree <= 315) return context.getString(R.string.kitchen_window_bad);
+                        else return context.getString(R.string.default_direction);
 
                 }
-                return 0;
+                return "0";
 
             case 2: // hall
                 switch (object) {
                     case 1://door
-                        if (degree >= 135 && degree <= 225) return 1;
-                        else if (degree >= 45 && degree <= 135 || degree >= 225 && degree <= 305)
-                            return 2;
-                        else return 3;
+                        if (degree >= 0 && degree <= 45) return context.getString(R.string.hall_door_perfect1);
+                        else if (degree >= 45 && degree <= 90) return context.getString(R.string.hall_door_perfect2);
+                        else if (degree >= 225 && degree <= 315) return context.getString(R.string.hall_door_bad1);
+                        else if (degree >= 135 && degree <= 225) return context.getString(R.string.hall_door_bad2);
+                        else return context.getString(R.string.default_direction);
 
 
                     case 2://window
-                        if (degree >= 135 && degree <= 225) return 1;
-                        else if (degree >= 45 && degree <= 135 || degree >= 225 && degree <= 305)
-                            return 2;
-                        else return 3;
+                        if (degree >= 0 && degree <= 45) return context.getString(R.string.hall_window_perfect1);
+                        else if (degree >= 45 && degree <= 90) return context.getString(R.string.hall_window_perfect2);
+                        else if (degree >= 135 && degree <= 225) return context.getString(R.string.hall_window_bad1);
+                        else if (degree >= 225 && degree <= 315) return context.getString(R.string.hall_window_bad2);
+                        else return context.getString(R.string.default_direction);
 
                 }
-                return 0;
+                return "0";
 
 
             case 3: // bedroom
                 switch (object) {
                     case 1://door
-                        if (degree >= 45 && degree <= 135) return 1;
-                        else if (degree >= 135 && degree <= 225) return 2;
-                        else return 3;
+                        if (degree >= 45 && degree <= 135) return context.getString(R.string.bedroom_door_perfect);
+                        else if (degree >= 225 && degree <= 315) return context.getString(R.string.bedroom_door_good1);
+                        else if (degree >= 0 && degree <= 45 || degree>=315 && degree<=360) return context.getString(R.string.bedroom_door_good2);
+                        else if (degree >= 135 && degree <= 225) return context.getString(R.string.bedroom_door_bad);
+                        else return context.getString(R.string.default_direction);
 
 
                     case 2://window
-                        if (degree >= 235 && degree <= 305) return 1;
-                        else if (degree >= 135 && degree <= 225) return 2;
-                        else return 3;
+                        if (degree >= 225 && degree <= 315) return context.getString(R.string.bedroom_window_perfect);
+                        else if (degree >= 0 && degree <= 45) return context.getString(R.string.bedroom_window_good1);
+                        else if (degree >= 45 && degree <= 135) return context.getString(R.string.bedroom_window_good2);
+                        else if (degree >= 135 && degree <= 225) return context.getString(R.string.bedroom_window_bad);
+                        else return context.getString(R.string.default_direction);
 
                 }
-                return 0;
+                return "0";
+
+            case 4: // classroom
+                switch (object) {
+                    case 1://door
+                        if (degree >= 0 && degree <= 45) return context.getString(R.string.studyroom_door_perfect1);
+                        else if (degree >= 45 && degree <= 90) return context.getString(R.string.studyroom_door_perfect2);
+                        else if (degree >= 225 && degree <= 270) return context.getString(R.string.studyroom_door_good1);
+                        else if (degree >= 135 && degree <= 225) return context.getString(R.string.studyroom_door_bad);
+                        else return context.getString(R.string.default_direction);
 
 
+
+                    case 2://window
+                        if (degree >= 45 && degree <= 90) return context.getString(R.string.studyroom_window_perfect1);
+                        else if (degree >= 0 && degree <= 45) return context.getString(R.string.studyroom_window_perfect2);
+                        else if (degree >= 225 && degree <= 315) return context.getString(R.string.studyroom_window_good1);
+                        else if (degree >= 135 && degree <= 225) return context.getString(R.string.studyroom_window_bad);
+                        else return context.getString(R.string.default_direction);
+
+                }
+                return "0";
             default:
-                return 0;
+                return "0";
 
         }
 
