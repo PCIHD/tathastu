@@ -433,5 +433,31 @@ UNFAVOURABLE   \n
     <string name="bedroom_door_perfect">
     The image of door captured in your bedroom is in West direction which is really auspicious .   \n
     As door facing west creates peace and harmony.  \n\n
-    </string>>
+    </string>
+
+    <string name="bedroom_door_good">
+    The image of door captured in your bedroom is in East direction which is really average and the effect of vastu is neutral.   \n
+    As door facing east creates an okay not perfect but can work.\n\n
+    </string>
+
+    <string name="Bedroom_door_bad">
+    The image of door captured in your bedroom is in North / South direction which is bad according to vastu and basic room architecture.   \n
+    As door facing North/ South creates a negative effect so we suggest not have a door in North/South direction.\n\n
+    </string>
+
+    <string name="bedroom_window_perfect">
+    The image of window captured in your bedroom is in West/South direction which is great as it gives ample amount of sunlight during day time.   \n
+    As door facing west/South gives positivity and sunlight.  \n\n
+    </string>
+
+    <string name="Bedroom_window_good">
+    The image of window captured in your bedroom is in East direction which is really average and the effect of vastu is neutral.   \n
+    As window facing east creates an okay not perfect and there’s no extreme need to change window.\n\n
+    </string>
+
+    <string name="Bedroom_window_bad">
+    The image of window captured in your bedroom is in North / South direction which is bad according to vastu and basic room architecture.   \n
+    As window facing north creates a negative effect. So we suggest not have a door in North direction.  \n\n
+    </string>
+
 </resources>
