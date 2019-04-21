@@ -260,7 +260,7 @@ public class CompassActivity extends AppCompatActivity {
             Bitmap scaled = Bitmap.createScaledBitmap(bitmap,140,140,false);
             Bitmap rotated = Bitmap.createBitmap(scaled,0,0,scaled.getWidth(),scaled.getHeight(),matrix,true);
 
-            Class_storedData class_storedData = new Class_storedData(obj,Room,currentAzimuth,rotated,generatePdfName(),this);
+            Class_storedData class_storedData = new Class_storedData(1,1,currentAzimuth,rotated,generatePdfName(),this);
             class_storedData.generate_pdf();
 
 

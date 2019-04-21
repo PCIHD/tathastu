@@ -1,6 +1,7 @@
 package com.miniproj.paragchaudhari.tathastu;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.pdf.PdfDocument;
 import android.os.Environment;
@@ -64,7 +65,7 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
        Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
        switch (room_id){
            case 1:switch (object_id){
-               case 1:  suggestion_id = getSuggestion();
+               case 1:
                         room = "Kitchen";
                         object = "Door";
                return;
@@ -72,7 +73,9 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
                    room = "Kitchen";
                    object = "Window";   break;
                default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
-           }return;
+
+           }
+               suggestion_id = Resources.getSystem().getString(R.string.Kitchen_Window);return;
            case 2:switch (object_id){
                case 1:suggestion_id = getSuggestion();
                    room = "Hall";
@@ -126,8 +129,8 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
         object_image = (ImageView) content.findViewById(R.id.Room_image);
         object_image.setImageBitmap(image_id);
         acceptiblity_textview = (TextView) content.findViewById(R.id.acceptability);
-        acceptiblity_textview.setText(Acceptiblity_id);
-        suggestion_textview = (TextView) content.findViewById(R.id.suggestions);
+        acceptiblity_textview.setText(Acceptiblity_id + degree_label);
+        suggestion_textview = (TextView) content.findViewById(R.id.description);
         suggestion_textview.setText(suggestion_id);
 
 
