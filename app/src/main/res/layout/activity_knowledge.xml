@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:fillViewport="false">
 
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="80dp"
+            android:fontFamily="sans-serif-thin"
             android:text="TATHASTU"
             android:textColor="@android:color/holo_red_light"
             android:textColorHighlight="@android:color/holo_red_dark"
@@ -37,7 +39,7 @@
         <Button
             android:id="@+id/button1"
             android:layout_width="400dp"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
             android:background="@drawable/maindoor"
@@ -46,7 +48,7 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="400dp"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/kitchen"
@@ -55,7 +57,7 @@
         <Button
             android:id="@+id/button3"
             android:layout_width="400dp"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/bedrooms"
@@ -64,7 +66,7 @@
         <Button
             android:id="@+id/button4"
             android:layout_width="400dp"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/studyrooms"
@@ -73,7 +75,7 @@
         <Button
             android:id="@+id/button5"
             android:layout_width="400dp"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/poojarooms"
@@ -82,7 +84,7 @@
         <Button
             android:id="@+id/button6"
             android:layout_width="400dp"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/bathrooms"
@@ -91,7 +93,7 @@
         <Button
             android:id="@+id/button7"
             android:layout_width="400dp"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/wealth"
@@ -100,7 +102,7 @@
         <Button
             android:id="@+id/button8"
             android:layout_width="400dp"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/marriage"
@@ -109,7 +111,7 @@
         <Button
             android:id="@+id/button9"
             android:layout_width="400dp"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/education"
