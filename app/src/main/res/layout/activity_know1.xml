@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="16dp"
+        android:background="@drawable/p1"
         android:scrollbars="vertical"
         android:text="@string/maindoor"
         android:textSize="24sp" />
