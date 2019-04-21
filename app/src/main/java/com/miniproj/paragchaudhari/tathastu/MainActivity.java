@@ -1,8 +1,8 @@
 package com.miniproj.paragchaudhari.tathastu;
 //vastu corp - > boycott parag chaudhari
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -43,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
                 opencomp();
             }
         });
+        Navin_button = (Button) findViewById(R.id.Activity_MainNavin_Button);
+        Navin_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navin();
+            }
+        });
 
     }
     public void arview(View view)
@@ -61,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
     public void opencomp(){
         Intent intent =new Intent(this,CompassActivity.class);
         startActivity(intent);
+    }
+    public void navin(){
+        Intent intent = new Intent(this,Navin.class);
+        startActivity(intent);
+
     }
 
 
