@@ -11,10 +11,15 @@ import android.graphics.YuvImage;
 import android.media.Image;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
@@ -43,8 +48,9 @@ public class CompassActivity extends AppCompatActivity {
     private Custom_arFragment fragment;
     private ImageButton door_button,window_button;
     SnackbarHelper snackbarHelper = new SnackbarHelper();
-    private int Room;
-
+    private int room;
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
 
 
 
@@ -63,6 +69,41 @@ public class CompassActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listcompass);
         checkpermission();
+        InitializeDrawer();
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                menuItem.setChecked(true);
+                switch(menuItem.getItemId()){
+                    case R.id.nav_hall:
+                        room = 2;
+
+                        return true;
+                    case R.id.nav_kitchen:
+                        room = 1;
+                        return true;
+                    case R.id.nav_bedroom:
+                        room = 3;
+                        return true;
+                    case R.id.nav_study_room:
+                        room = 4;
+                        return true;
+
+
+
+
+
+
+
+                }
+
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return  true;
+
+            }
+
+        });
+
         fragment = (Custom_arFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
         fragment.getPlaneDiscoveryController().hide();
         door_button = (ImageButton) findViewById(R.id.Compass_doorbutton);
@@ -260,13 +301,22 @@ public class CompassActivity extends AppCompatActivity {
             Bitmap scaled = Bitmap.createScaledBitmap(bitmap,140,140,false);
             Bitmap rotated = Bitmap.createBitmap(scaled,0,0,scaled.getWidth(),scaled.getHeight(),matrix,true);
 
-            Class_storedData class_storedData = new Class_storedData(1,1,currentAzimuth,rotated,generatePdfName(),this);
+            Class_storedData class_storedData = new Class_storedData(obj,room,currentAzimuth,rotated,generatePdfName(),this);
             class_storedData.generate_pdf();
 
 
         }catch (Exception e1){
             Toast.makeText(this,e1.getMessage(),Toast.LENGTH_LONG);
         }
+
+    }
+    private void InitializeDrawer(){
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        drawerLayout.openDrawer(GravityCompat.START);
+
+
+
 
     }
 

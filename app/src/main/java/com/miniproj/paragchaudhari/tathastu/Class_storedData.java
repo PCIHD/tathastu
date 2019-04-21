@@ -92,7 +92,9 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
                    room = "Bedroom";
                    object = "Door";
                return;
-               case 2: suggestion_id = getSuggestion();
+               case 2: room = "Bedroom";
+                   object = "Window";
+                   suggestion_id = getSuggestion();
 
                    return;
                default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
