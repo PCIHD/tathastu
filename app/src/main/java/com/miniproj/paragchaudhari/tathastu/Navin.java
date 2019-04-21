@@ -69,10 +69,11 @@ public class Navin extends AppCompatActivity {
 
     public void openRenderer(String filename) {
         try {
-            Toast.makeText(this, path + filename, Toast.LENGTH_LONG).show();
+
 
             File pdf = new File(filename);
-            Uri path_uri = FileProvider.getUriForFile(this, "com.miniproj.paragchaudhari.tathastu.fileprovider" , pdf);
+            Toast.makeText(this, filename, Toast.LENGTH_LONG).show();
+            Uri path_uri = FileProvider.getUriForFile(this, "com.miniproj.paragchaudhari.tathastu" , pdf);
 
             Intent intent = new Intent(Intent.ACTION_VIEW);
 
@@ -87,7 +88,7 @@ public class Navin extends AppCompatActivity {
                 startActivity(intent);
             }
         }catch (Exception e1){
-            Toast.makeText(this,e1.getMessage(),Toast.LENGTH_LONG).show();
+           // Toast.makeText(this,e1.getMessage(),Toast.LENGTH_LONG).show();
         }
 
 }}
