@@ -497,7 +497,7 @@ The image of door captured in your kitchen is in south with north opening direct
 As door opening in South creates a negative effect ,so we suggest not have such orientation \n\n
 </string>
 
-    
+
 
 
     <string name="kitchen_window_perfect">
@@ -617,4 +617,6 @@ The image of window captured in your Study room is in South direction which is n
 As window in west does not allow air to flow.\n\n
 </string>
 
+
+    <string name="default_direction">This direction is not appropriate for door/window </string>
 </resources>
