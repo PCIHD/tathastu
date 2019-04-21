@@ -1,7 +1,6 @@
 package com.miniproj.paragchaudhari.tathastu;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.pdf.PdfDocument;
 import android.os.Environment;
@@ -68,6 +67,8 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
                case 1:
                         room = "Kitchen";
                         object = "Door";
+                        suggestion_id = getSuggestion();
+
                return;
                case 2:suggestion_id = getSuggestion();
                    room = "Kitchen";
@@ -75,7 +76,7 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
                default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
 
            }
-               suggestion_id = Resources.getSystem().getString(R.string.Kitchen_Window);return;
+               return;
            case 2:switch (object_id){
                case 1:suggestion_id = getSuggestion();
                    room = "Hall";

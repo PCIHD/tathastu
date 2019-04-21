@@ -41,12 +41,10 @@ dependencies {
 }
 
 
-
 sceneform.asset('sampledata/bed/Bed_01.obj',
         'default',
         'sampledata/bed/Bed_01.sfa',
         'src/main/assets/Bed_01')
-
 
 
 sceneform.asset('sampledata/couch/model.obj',
@@ -63,7 +61,6 @@ sceneform.asset('sampledata/Expensive_sofa/expensive_sofa.obj',
         'default',
         'sampledata/Expensive_sofa/expensive_sofa.sfa',
         'src/main/assets/expensive_sofa')
-
 
 
 sceneform.asset('sampledata/computer table/computer_table.obj',
