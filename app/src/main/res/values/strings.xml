@@ -451,8 +451,6 @@ As door opening in South creates a negative effect so we suggest not have orient
 </string>
 
 
-
-
     <string name="bedroom_window_perfect">
 The image of window captured in your bedroom is in West direction which is great as it gives ample amount of sunlight during day time.   \n
 As window facing west gives positivity and sunlight.  \n\n
@@ -472,8 +470,6 @@ As window facing North creates an okay not perfect and there’s no extreme need
 The image of window captured in your bedroom is in North with South opening direction which is bad according to vastu and basic room architecture.   \n
 As window facing north creates a negative effect. So we suggest not have a door in North direction.  \n\n
 </string>
-
-
 
 
     <string name="kitchen_door_perfect">
@@ -497,8 +493,6 @@ As door opening in South creates a negative effect ,so we suggest not have such 
 </string>
 
 
-
-
     <string name="kitchen_window_perfect">
 The image of window captured in your kitchen is in East direction which is really great and it keeps the air flowing.   \n
 As window facing east is perfect and there’s no need to change window.\n\n
@@ -518,9 +512,6 @@ As window facing North is okay, not perfect and there’s no extreme need to cha
 The image of window captured in your kitchen is in West direction which is bad according to vastu and basic room architecture.   \n
 As window facing west creates a negative effect. So we suggest not have a door in west direction.  \n\n
 </string>
-
-
-
 
 
     <string name="hall_door_perfect1">
@@ -544,8 +535,6 @@ As door opening in South creates a negative effect ,so we suggest not have such 
 </string>
 
 
-
-
     <string name="hall_window_perfect1">
 The image of window captured in your kitchen is in East direction which is really great and it keeps the air flowing.   \n
 As window facing east is perfect and there’s no need to change window.\n\n
@@ -565,11 +554,6 @@ As window in south does not allow air to flow.\n\n
 The image of window captured in your kitchen is in west direction which is not good and has negative effect .   \n
 As window in west does not allow air to flow.\n\n
 </string>
-
-
-
-
-
 
 
     <string name="studyroom_door_perfect1">
@@ -593,9 +577,6 @@ The image of door captured in your bedroom is in south with North opening, this 
 </string>
 
 
-
-
-
     <string name="studyroom_window_perfect1">
 The image of window captured in your Study room is in East direction which is really great and it keeps the air flowing.   \n
 As window facing east is perfect and there’s no need to change window.\n\n
@@ -610,7 +591,6 @@ As window in east is perfect and there’s no need to change window.\n\n
 The image of window captured in your Study room is in West with East opening, this direction is really average and the effect of vastu is neutral.   \n
 As door opening in east is okay not perfect but can work.\n\n
 </string>
-
 
 
     <string name="studyroom_window_bad">

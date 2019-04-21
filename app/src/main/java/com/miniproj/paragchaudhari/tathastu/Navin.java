@@ -27,7 +27,7 @@ public class Navin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navin);
+        setContentView(R.layout.activity_report_activity);
         navigationView = (LinearLayout) findViewById(R.id.Report_list);
 
 

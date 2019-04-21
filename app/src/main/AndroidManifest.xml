@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
     package="com.miniproj.paragchaudhari.tathastu">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-feature
         android:name="android.hardware.camera.ar"
@@ -18,9 +17,8 @@
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-
-        >
+        android:theme="@style/AppTheme">
+        <activity android:name=".report_activity"></activity>
         <activity android:name=".Navin" />
         <activity android:name=".listviewactivity2" />
         <activity android:name=".know9" />
@@ -52,6 +50,7 @@
         <activity
             android:name=".CompassActivity"
             android:label="Compass" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.miniproj.paragchaudhari.tathastu"
@@ -60,7 +59,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths"
-                tools:replace="android:resource"/>
+                tools:replace="android:resource" />
         </provider>
     </application>
 
