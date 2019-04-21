@@ -2,72 +2,64 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:color="@color/colorAccent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@drawable/spc"
     android:scaleType="centerCrop"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/Activity_main_ArVision_Button"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:background="transparent"
 
         android:text="ARVision"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        android:textColor="@android:color/white"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="422dp"
         tools:layout_marginRight="100dp" />
     " />
 
     <Button
         android:id="@+id/Activity_Main_Knowledge_Button"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="40dp"
 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@android:color/transparent"
         android:text="KNOWLEDGE"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintEnd_toStartOf="@+id/Activity_main_ArVision_Button"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@android:color/white"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="308dp"
         tools:text="KNOWLEDGE" />
 
     <Button
         android:id="@+id/Activity_MainNavin_Button"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="160dp"
 
-        android:layout_height="160dp"
-        android:layout_marginStart="212dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
 
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:text="Navin"
-        app:layout_constraintBottom_toTopOf="@+id/Activity_main_ArVision_Button"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@android:color/white"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="185dp"
         tools:text="Navin" />
 
 
     <Button
         android:id="@+id/Activity_main_compass_button"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="8dp"
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:text="Compass"
-        app:layout_constraintBottom_toTopOf="@+id/Activity_Main_Knowledge_Button"
 
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textColor="@android:color/white"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="63dp" />
 
 
 </android.support.constraint.ConstraintLayout>
