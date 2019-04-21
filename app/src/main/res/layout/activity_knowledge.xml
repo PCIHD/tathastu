@@ -8,7 +8,7 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_blue_bright"
+        android:background="@drawable/spc"
         android:orientation="vertical">
 
         <TextView
@@ -16,12 +16,12 @@
             android:layout_width="222dp"
             android:layout_height="119dp"
             android:layout_gravity="center"
-            android:layout_marginTop="80dp"
             android:layout_marginLeft="40dp"
+            android:layout_marginTop="80dp"
             android:background="@drawable/feather"
             android:fontFamily="@font/galada"
             android:text="@string/title"
-            android:textColor="?android:attr/colorControlNormal"
+            android:textColor="@android:color/background_light"
             android:textColorHighlight="@android:color/holo_red_dark"
             android:textColorHint="@android:color/holo_red_dark"
             android:textColorLink="@android:color/holo_red_dark"
@@ -37,7 +37,7 @@
             android:fontFamily="@font/bad_script"
             android:shadowColor="@android:color/holo_red_light"
             android:text="Welcome to TATHASTU !!!"
-            android:textColor="?android:attr/colorControlNormal"
+            android:textColor="@android:color/background_light"
             android:textSize="16sp" />
 
         <Button
