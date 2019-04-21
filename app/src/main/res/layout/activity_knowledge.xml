@@ -8,18 +8,20 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_orange_light"
+        android:background="@android:color/holo_blue_bright"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/loginscrn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="222dp"
+            android:layout_height="119dp"
             android:layout_gravity="center"
             android:layout_marginTop="80dp"
-            android:fontFamily="sans-serif-thin"
-            android:text="TATHASTU"
-            android:textColor="@android:color/holo_red_light"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/feather"
+            android:fontFamily="@font/galada"
+            android:text="@string/title"
+            android:textColor="?android:attr/colorControlNormal"
             android:textColorHighlight="@android:color/holo_red_dark"
             android:textColorHint="@android:color/holo_red_dark"
             android:textColorLink="@android:color/holo_red_dark"
@@ -32,9 +34,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/bad_script"
             android:shadowColor="@android:color/holo_red_light"
-            android:text="Welcome to TATHASTU"
-            android:textColor="@android:color/holo_red_light" />
+            android:text="Welcome to TATHASTU !!!"
+            android:textColor="?android:attr/colorControlNormal"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button1"
@@ -42,7 +46,8 @@
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
-            android:background="@drawable/maindoor"
+            android:background="@drawable/button_round1"
+            android:fontFamily="cursive"
             android:text="Main Door" />
 
         <Button
@@ -52,6 +57,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/kitchen"
+            android:fontFamily="cursive"
             android:text="Kitchen" />
 
         <Button
@@ -61,6 +67,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/bedrooms"
+            android:fontFamily="cursive"
             android:text="Bedroom" />
 
         <Button
@@ -70,6 +77,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/studyrooms"
+            android:fontFamily="cursive"
             android:text="Study Room" />
 
         <Button
@@ -79,6 +87,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/poojarooms"
+            android:fontFamily="cursive"
             android:text="Pooja Room" />
 
         <Button
@@ -88,6 +97,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/bathrooms"
+            android:fontFamily="cursive"
             android:text="Bathroom" />
 
         <Button
@@ -97,6 +107,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/wealth"
+            android:fontFamily="cursive"
             android:text="Money" />
 
         <Button
@@ -106,6 +117,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/marriage"
+            android:fontFamily="cursive"
             android:text="Marriage" />
 
         <Button
@@ -115,6 +127,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/education"
+            android:fontFamily="cursive"
             android:text="Education" />
     </LinearLayout>
 </ScrollView>

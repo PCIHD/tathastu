@@ -620,4 +620,6 @@ As window in west does not allow air to flow.\n\n
 
 
     <string name="default_direction">This direction is not appropriate for door/window </string>
+
+    <string name="title">\n \n \t TATHASTU</string>
 </resources>
