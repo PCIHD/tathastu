@@ -3,23 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:fillViewport="false">
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView android:id="@+id/loginscrn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_orange_light"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/loginscrn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="80dp"
             android:text="TATHASTU"
+            android:textColor="@android:color/holo_red_light"
+            android:textColorHighlight="@android:color/holo_red_dark"
+            android:textColorHint="@android:color/holo_red_dark"
+            android:textColorLink="@android:color/holo_red_dark"
             android:textSize="25dp"
-            android:textStyle="bold"
-            android:layout_gravity="center"/>
-        <TextView android:id="@+id/fstTxt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fstTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:shadowColor="@android:color/holo_red_light"
             android:text="Welcome to TATHASTU"
-            android:layout_gravity="center"/>
+            android:textColor="@android:color/holo_red_light" />
 
         <Button
             android:id="@+id/button1"
