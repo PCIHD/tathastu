@@ -6,7 +6,7 @@
             <solid
                 android:color="@color/cardview_shadow_start_color"/>
             <stroke
-                android:color="@color/colorAccent"
+                android:color="#FF1B1E7A"
                 android:width="2dp" />
 
             <corners
