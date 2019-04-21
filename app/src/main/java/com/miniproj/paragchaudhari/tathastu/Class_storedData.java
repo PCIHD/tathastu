@@ -28,7 +28,7 @@ final public  class Class_storedData {
     private String room ,object,File_name;
 
     private Context context;
-    private TextView  room_textview,acceptiblity_textview,suggestion_textview;
+    private TextView  room_textview,acceptiblity_textview,acceptiblity_textview1,suggestion_textview;
     private ImageView object_image;
     PdfDocument report = new PdfDocument();
 
@@ -126,14 +126,18 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
         content.measure(measureWidth, measuredHeight);
         content.layout(0, 0, page.getCanvas().getWidth(), page.getCanvas().getHeight());
 
+        String numberAsString = Float.toString(degree_label);
+
         room_textview = (TextView) content.findViewById(R.id.room_name);
         room_textview.setText(room);
         object_image = (ImageView) content.findViewById(R.id.Room_image);
         object_image.setImageBitmap(image_id);
         acceptiblity_textview = (TextView) content.findViewById(R.id.acceptability);
-        acceptiblity_textview.setText(Acceptiblity_id + degree_label);
+        acceptiblity_textview.setText(Acceptiblity_id);
         suggestion_textview = (TextView) content.findViewById(R.id.description);
         suggestion_textview.setText(suggestion_id);
+        acceptiblity_textview1 = (TextView) content.findViewById(R.id.degree_val);
+        acceptiblity_textview1.setText(numberAsString);
 
 
 
