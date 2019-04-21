@@ -46,7 +46,7 @@
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
-            android:background="@drawable/button_round1"
+            android:background="@drawable/maindoor"
             android:fontFamily="cursive"
             android:text="Main Door" />
 
