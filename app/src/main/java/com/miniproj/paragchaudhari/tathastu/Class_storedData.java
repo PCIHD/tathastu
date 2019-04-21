@@ -19,7 +19,9 @@ final public  class Class_storedData {
 
     private String suggestion_id;
     private int room_id,object_id;
-    private String description_id;
+    private int description_id;
+
+
     private Bitmap image_id;
     private String Acceptiblity_id;
     private float degree_label;
@@ -62,23 +64,28 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
     }
         private void getDescription_id(){
 
-       Acceptiblity_id = (String) check_validation(room_id,object_id,degree_label);
+       Acceptiblity_id = (String) check_validation(room_id,object_id,degree_label,description_id);
        Toast.makeText(context,"Test",Toast.LENGTH_LONG).show();
        switch (room_id){
-           case 1:switch (object_id){
+           case 1:
+               description_id = 1;
+               switch (object_id){
                case 1:
                         room = "Kitchen";
                         object = "Door";
+
                return;
                case 2:
                    room = "Kitchen";
-                   object = "Window";   break;
+                   object = "Window";
+                   break;
                default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
 
            }
 
                 return;
-           case 2:switch (object_id){
+           case 2:description_id = 2;
+           switch (object_id){
                case 1:
                    room = "Hall";
                    object = "Door";
@@ -89,7 +96,8 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
                   return;
                default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
            }return;
-           case 3:switch (object_id){
+           case 3:description_id = 3;
+           switch (object_id){
                case 1:
                    room = "Bedroom";
                    object = "Door";
@@ -101,6 +109,19 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
                    return;
                default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
            }return;
+           case 4:description_id = 4;
+               switch (object_id){
+                   case 1:
+                       room = "Studyroom";
+                       object = "Door";
+                       return;
+                   case 2: room = "Studyroom";
+                       object = "Window";
+
+
+                       return;
+                   default:Toast.makeText(context,"error",Toast.LENGTH_LONG).show();
+               }return;
        }
    }
 
@@ -109,14 +130,14 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
        getDescription_id();
         String directory_path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS) +"/Tathastu/";
         File file = new File(directory_path);
-        String target = directory_path + File_name;
+        String target = directory_path + "Report.pdf";
         File filepath = new File(target);
 
 
 
 
 
-        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(1400,3000,1).create();
+        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(1400,4000,1).create();
         PdfDocument.Page page = report.startPage(pageInfo);
 
 
@@ -130,6 +151,7 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
 
         String numberAsString = Float.toString(degree_label);
         String deg = getDegreeLabel();
+        String descp = getDescription();
 
         room_textview = (TextView) content.findViewById(R.id.room_name);
         room_textview.setText(room);
@@ -138,7 +160,7 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
         acceptiblity_textview = (TextView) content.findViewById(R.id.acceptability);
         acceptiblity_textview.setText(Acceptiblity_id);
         suggestion_textview = (TextView) content.findViewById(R.id.description);
-        suggestion_textview.setText(suggestion_id);
+        suggestion_textview.setText(descp);
         acceptiblity_textview1 = (TextView) content.findViewById(R.id.degree_val);
         acceptiblity_textview1.setText(numberAsString);
         acceptibility_textview2 = (TextView) content.findViewById(R.id.direction);
@@ -186,17 +208,18 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
         return null;
     }
 
-    private String getSuggestion(){
-       String value = "";
-       return value;
+    public String getDescription() {
+       switch (description_id){
+           case 1:return context.getString(R.string.kitchen_description);
+           case 2:return context.getString(R.string.Hall_description);
+           case 3:return context.getString(R.string.bedroom_description);
+           case 4:return context.getString(R.string.Study_room_description);
+       }
+
+        return null;
     }
 
-    private String getDescriptionId(){
-        String value = "";
-        return value;
-    }
-
-    private String check_validation(int room, int object , float degree){
+    private String check_validation(int room, int object, float degree, int description_id){
 
         switch(room) {
           case 1: // kitchen
