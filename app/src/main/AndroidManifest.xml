@@ -46,6 +46,7 @@
         <activity
             android:name=".CompassActivity"
             android:label="Compass" />
+
     </application>
 
 </manifest>
