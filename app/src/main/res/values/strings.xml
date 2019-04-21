@@ -252,7 +252,7 @@
 
     <string name="report">Report</string>
 
-    <string name="bedroom_description">Room: BEDROOM   \n\n
+    <string name="bedroom_description">
 
 NORTH    \n
 
@@ -297,7 +297,7 @@ UNFAVOURABLE   \n
 	Entrance door not favourable in South Direction   \n\n
 </string>
 
-    <string name="Hall_description">Room: HALL   \n\n
+    <string name="Hall_description">
 
 NORTH      \n
 
@@ -342,7 +342,7 @@ UNFAVOURABLE    \n
 </string>
 
 
-    <string name="Study_room_description">Room: STUDY ROOM    \n\n
+    <string name="Study_room_description">
 
 NORTH   \n
 
@@ -386,7 +386,7 @@ UNFAVOURABLE    \n
 </string>
 
 
-    <string name="kitchen_description">Room: KITCHEN   \n\n
+    <string name="kitchen_description">
 
 NORTH    \n
 
