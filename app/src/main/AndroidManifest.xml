@@ -28,7 +28,6 @@
         <activity android:name=".know3" />
         <activity android:name=".know2" />
         <activity android:name=".know1" />
-        <activity android:name=".listitemactivity1" />
         <activity android:name=".knowledge" />
         <activity android:name=".MainActivity">
             <intent-filter>
