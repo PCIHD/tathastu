@@ -431,139 +431,142 @@ UNFAVOURABLE   \n
 
 
     <string name="bedroom_door_perfect">
-    The image of door captured in your bedroom is in East with West-opening,this direction  is really auspicious .   \n
-    As door opening west creates peace and harmony.  \n\n
-    </string>
+The image of door captured in your bedroom is in East with West-opening, this direction  is really auspicious .   \n
+As door opening west creates peace and harmony.  \n\n
+</string>
 
     <string name="bedroom_door_good1">
-    The image of door captured in your bedroom is in West with East opening,this direction is really average and the effect of vastu is neutral.   \n
-    As door opening in east is okay not perfect but can work.\n\n
-    </string>
+The image of door captured in your bedroom is in West with East opening, this direction is really average and the effect of vastu is neutral.   \n
+As door opening in east is okay not perfect but can work.\n\n
+</string>
 
     <string name="bedroom_door_good2">
-    The image of door captured in your bedroom is in south with North opening,this direction is really average and the effect of vastu is neutral.   \n
-    As door opening in North creates is okay not perfect but can work.\n\n
-    </string>
+The image of door captured in your bedroom is in south with North opening, this direction is really average and the effect of vastu is neutral.   \n
+As door opening in North creates is okay not perfect but can work.\n\n
+</string>
 
     <string name="bedroom_door_bad">
-    The image of door captured in your bedroom is in North with South opening direction, which is bad according to vastu and basic room architecture.   \n
-    As door opening in South creates a negative effect so we suggest not have orientation \n\n
-    </string>
+The image of door captured in your bedroom is in North with South opening direction, which is bad according to vastu  \n
+    and basic room architecture.   \n
+As door opening in South creates a negative effect so we suggest not have orientation \n\n
+</string>
 
 
 
 
     <string name="bedroom_window_perfect">
-    The image of window captured in your bedroom is in West direction which is great as it gives ample amount of sunlight during day time.   \n
-    As window facing west gives positivity and sunlight.  \n\n
-    </string>
+The image of window captured in your bedroom is in West direction which is great as it gives ample amount of sunlight during day time.   \n
+As window facing west gives positivity and sunlight.  \n\n
+</string>
 
     <string name="bedroom_window_good1">
-    The image of window captured in your bedroom is in East direction which is really average and the effect of vastu is neutral.   \n
-    As window facing east is okay not perfect and there’s no extreme need to change window.\n\n
-    </string>
+The image of window captured in your bedroom is in East direction which is really average and the effect of vastu is neutral.   \n
+As window facing east is okay not perfect and there’s no extreme need to change window.\n\n
+</string>
 
     <string name="bedroom_window_good2">
-    The image of window captured in your bedroom is in North direction which is really average and the effect of vastu is neutral.   \n
-    As window facing North creates an okay not perfect and there’s no extreme need to change window.\n\n
-    </string>
+The image of window captured in your bedroom is in North direction which is really average and the effect of vastu is neutral.   \n
+As window facing North creates an okay not perfect and there’s no extreme need to change window.\n\n
+</string>
 
     <string name="bedroom_window_bad">
-    The image of window captured in your bedroom is in North with South opening direction which is bad according to vastu and basic room architecture.   \n
-    As window facing north creates a negative effect. So we suggest not have a door in North direction.  \n\n
-    </string>
+The image of window captured in your bedroom is in North with South opening direction which is bad according to vastu and basic room architecture.   \n
+As window facing north creates a negative effect. So we suggest not have a door in North direction.  \n\n
+</string>
 
 
 
 
     <string name="kitchen_door_perfect">
-    The image of door captured in your kitchen is in North with South opening direction which is perfect according to vastu and basic room architecture.   \n
-    As door facing north creates a positive effect. So we suggest to have a door in North direction.  \n\n
-    </string>
+The image of door captured in your kitchen is in North with South opening direction which is perfect according to vastu and basic room architecture.   \n
+As door facing north creates a positive effect. So we suggest to have a door in North direction.  \n\n
+</string>
 
     <string name="kitchen_door_good1">
-    The image of door captured in your kitchen is in West with East opening,this direction is really average and the effect of vastu is neutral.   \n
-    As door opening in east is okay not perfect but can work.\n\n
-    </string>
+The image of door captured in your kitchen is in West with East opening, this direction is really average and the effect of vastu is neutral.   \n
+As door opening in east is okay not perfect but can work.\n\n
+</string>
 
     <string name="kitchen_door_good2">
-    The image of door captured in your kitchen is in East with West-opening,this direction  is good enough .This will not create any complications .   \n
-    As door opening west has neutral effect.  \n\n
-    </string>
+The image of door captured in your kitchen is in East with West-opening, this direction  is good enough .This will not create any complications .   \n
+As door opening west has neutral effect.  \n\n
+</string>
 
     <string name="kitchen_door_bad">
-    The image of door captured in your kitchen is in south with north opening direction, which is bad according to vastu and basic room architecture .   \n
-    As door opening in South creates a negative effect ,so we suggest not have such orientation \n\n
-    </string>
+The image of door captured in your kitchen is in south with north opening direction, which is bad according to vastu and basic room architecture .   \n
+As door opening in South creates a negative effect ,so we suggest not have such orientation \n\n
+</string>
+
 
 
 
 
     <string name="kitchen_window_perfect">
-    The image of window captured in your kitchen is in East direction which is really great and it keeps the air flowing.   \n
-    As window facing east is perfect and there’s no need to change window.\n\n
-    </string>
+The image of window captured in your kitchen is in East direction which is really great and it keeps the air flowing.   \n
+As window facing east is perfect and there’s no need to change window.\n\n
+</string>
 
     <string name="kitchen_window_good1">
-    The image of window captured in your kitchen is in South-East (or South) direction which is really average and the effect of vastu is neutral.   \n
-    As window facing south-east is okay not perfect and there’s no extreme need to change window.\n\n
-    </string>
+The image of window captured in your kitchen is in South-East (or South) direction which is really average and the effect of vastu is neutral.   \n
+As window facing south-east is okay not perfect and there’s no extreme need to change window.\n\n
+</string>
 
     <string name="kitchen_window_good2">
-    The image of window captured in your kitchen is in North (or north-east) direction which is really average and the effect of vastu is neutral.   \n
-    As window facing North is okay, not perfect and there’s no extreme need to change window.\n\n
-    </string>
+The image of window captured in your kitchen is in North (or north-east) direction which is really average and the effect of vastu is neutral.   \n
+As window facing North is okay, not perfect and there’s no extreme need to change window.\n\n
+</string>
 
     <string name="kitchen_window_bad">
-    The image of window captured in your kitchen is in West direction which is bad according to vastu and basic room architecture.   \n
-    As window facing west creates a negative effect. So we suggest not have a door in west direction.  \n\n
-    </string>
+The image of window captured in your kitchen is in West direction which is bad according to vastu and basic room architecture.   \n
+As window facing west creates a negative effect. So we suggest not have a door in west direction.  \n\n
+</string>
+
 
 
 
 
     <string name="hall_door_perfect1">
-    The image of door captured in your hall is in North(or north-east) with South opening direction, which is perfect according to vastu and basic Hall and entrance room architecture.   \n
-    As door facing north creates a positive effect. So we suggest to have a door in North(or north east) direction.  \n\n
-    </string>
+The image of door captured in your hall is in North(or north-east) with South opening direction, which is perfect according to vastu and basic Hall and entrance room architecture.   \n
+As door facing north creates a positive effect. So we suggest to have a door in North(or north east) direction.  \n\n
+</string>
 
     <string name="hall_door_perfect2">
-    The image of door captured in your Hall is in East with West-opening,this direction  is good for your home entrance .This will not create any complications .   \n
-    As door opening in west perfect.  \n\n
-    </string>
+The image of door captured in your Hall is in East with West-opening, this direction  is good for your home entrance .This will not create any complications .   \n
+As door opening in west perfect.  \n\n
+</string>
 
     <string name="hall_door_bad1">
-    The image of door captured in your hall is in West with East opening,this direction is bad considering vastu and other scientific parameters .   \n
-    As door opening in east should be changed for a positive effect .\n\n
-    </string>
+The image of door captured in your hall is in West with East opening, this direction is bad considering vastu and other scientific parameters .   \n
+As door opening in east should be changed for a positive effect .\n\n
+</string>
 
     <string name="hall_door_bad2">
-    The image of door captured in your kitchen is in south with north opening direction, which is bad according to vastu and basic room architecture .   \n
-    As door opening in South creates a negative effect ,so we suggest not have such orientation \n\n
-    </string>
+The image of door captured in your kitchen is in south with north opening direction, which is bad according to vastu and basic room architecture .   \n
+As door opening in South creates a negative effect ,so we suggest not have such orientation \n\n
+</string>
 
 
 
 
     <string name="hall_window_perfect1">
-    The image of window captured in your kitchen is in East direction which is really great and it keeps the air flowing.   \n
-    As window facing east is perfect and there’s no need to change window.\n\n
-    </string>
+The image of window captured in your kitchen is in East direction which is really great and it keeps the air flowing.   \n
+As window facing east is perfect and there’s no need to change window.\n\n
+</string>
 
     <string name="hall_window_perfect2">
-    The image of window captured in your kitchen is in South-East (or South) direction which is really average and the effect of vastu is neutral.   \n
-    As window facing south-east is okay not perfect and there’s no extreme need to change window.\n\n
-    </string>
+The image of window captured in your kitchen is in South-East (or South) direction which is really average and the effect of vastu is neutral.   \n
+As window facing south-east is okay not perfect and there’s no extreme need to change window.\n\n
+</string>
 
     <string name="hall_window_bad1">
-    The image of window captured in your kitchen is in south direction which is not good and has negative effect .   \n
-    As window in south does not allow air to flow.\n\n
-    </string>
+The image of window captured in your kitchen is in south direction which is not good and has negative effect .   \n
+As window in south does not allow air to flow.\n\n
+</string>
 
     <string name="hall_window_bad2">
-    The image of window captured in your kitchen is in west direction which is not good and has negative effect .   \n
-    As window in west does not allow air to flow.\n\n
-    </string>
+The image of window captured in your kitchen is in west direction which is not good and has negative effect .   \n
+As window in west does not allow air to flow.\n\n
+</string>
 
 
 
@@ -571,30 +574,48 @@ UNFAVOURABLE   \n
 
 
 
+    <string name="studyroom_door_perfect1">
+The image of door captured in your Study Room is in North( or north-east ) with West or (south-west)opening, this direction  is really auspicious .   \n
+As door opening west or (south-west) creates peace and harmony.  \n\n
+</string>
+
+    <string name="studyroom_door_perfect2">
+The image of door captured in your Study Room is in East with West-opening, this direction  is really auspicious .   \n
+As door opening west creates peace and harmony.  \n\n
+</string>
+
+    <string name="studyroom_door_good1">
+The image of door captured in your Study room is in West with East opening, this direction is really average and the effect of vastu is neutral.   \n
+As door opening in east is okay not perfect but can work.\n\n
+</string>
+
+    <string name="studyroom_door_bad">
+The image of door captured in your bedroom is in south with North opening, this direction is really bad .  \n
+    And we recommend not to have such orientation.   \n.\n
+</string>
 
 
 
 
 
     <string name="studyroom_window_perfect1">
-    The image of window captured in your Study room is in East direction which is really great and it keeps the air flowing.   \n
-    As window facing east is perfect and there’s no need to change window.\n\n
-    </string>
+The image of window captured in your Study room is in East direction which is really great and it keeps the air flowing.   \n
+As window facing east is perfect and there’s no need to change window.\n\n
+</string>
 
     <string name="studyroom_window_perfect2">
-    The image of window captured in your Study room is in north direction which is really great and the effect of vastu is great , with natural air for concentration.   \n
-    As window in east is perfect and there’s no need to change window.\n\n
-    </string>
+The image of window captured in your Study room is in north direction which is really great and the effect of vastu is great , with natural air for concentration.   \n
+As window in east is perfect and there’s no need to change window.\n\n
+</string>
 
     <string name="studyroom_window_good">
-    The image of window captured in your Study room is in west direction which is good and has neutral effect .   \n
-    As window in west does not give you sunlight and airflow continuosly in day time.\n\n
-    </string>
+The image of window captured in your Study room is in west direction which is good and has neutral effect .   \n
+As window in west does not give you sunlight and airflow continuously in day time.\n\n
+</string>
 
     <string name="studyroom_window_bad">
-    The image of window captured in your Study room is in South direction which is not good and has negative effect .   \n
-    As window in west does not allow air to flow.\n\n
-    </string>
-
+The image of window captured in your Study room is in South direction which is not good and has negative effect .   \n
+As window in west does not allow air to flow.\n\n
+</string>
 
 </resources>
