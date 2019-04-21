@@ -4,11 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    ImageView iv;
 
 
     private Button Arcore_button,Knowledge_button,Navin_button,Compass_button;
@@ -17,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        iv= (ImageView)findViewById(R.id.logo);
+        Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.clockwise);
+        iv.startAnimation(anim);
+
 
         Knowledge_button = (Button) findViewById(R.id.Activity_Main_Knowledge_Button);
         Knowledge_button.setOnClickListener(new View.OnClickListener() {
