@@ -109,14 +109,14 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
        getDescription_id();
         String directory_path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS) +"/Tathastu/";
         File file = new File(directory_path);
-        String target = directory_path + "Report.pdf";
+        String target = directory_path + File_name;
         File filepath = new File(target);
 
 
 
 
 
-        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(1400,2500,1).create();
+        PdfDocument.PageInfo pageInfo = new PdfDocument.PageInfo.Builder(1400,3000,1).create();
         PdfDocument.Page page = report.startPage(pageInfo);
 
 

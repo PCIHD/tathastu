@@ -189,12 +189,12 @@ public class CompassActivity extends AppCompatActivity {
         };
     }
     private String generateFileName(String object){
-        return  object + new SimpleDateFormat("yyyyMMddHHmmss", java.util.Locale.getDefault()).format(new Date());
+        return  object + new SimpleDateFormat("yyyyMMddHHmmss", java.util.Locale.getDefault()).format(new Date()) + ".pdf";
 
 
     }
     private String generatePdfName(){
-        return  "Report" + new SimpleDateFormat("yyyyMMddHHmmss", java.util.Locale.getDefault()).format(new Date());
+        return  "Report" + new SimpleDateFormat("yyyyMMddHHmmss", java.util.Locale.getDefault()).format(new Date()) + ".pdf";
 
 
     }
