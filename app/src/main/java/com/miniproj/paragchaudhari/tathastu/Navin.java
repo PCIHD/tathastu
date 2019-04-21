@@ -2,9 +2,11 @@ package com.miniproj.paragchaudhari.tathastu;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -43,8 +45,8 @@ public class Navin extends AppCompatActivity {
             File[] files = Tathsatu_directory.listFiles();
             for (int i = 0; i < files.length; i++) {
                 Button button_report = new Button(this);
-                String name = files[i].getName();
-                button_report.setText(name);
+                String name = files[i].getAbsolutePath();
+                button_report.setText(files[i].getName());
                 navigationView.addView(button_report);
                 button_report.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -68,16 +70,22 @@ public class Navin extends AppCompatActivity {
     public void openRenderer(String filename) {
         try {
             Toast.makeText(this, path + filename, Toast.LENGTH_LONG).show();
-            String file = path + filename;
-            File pdf = new File(file);
+
+            File pdf = new File(filename);
+            Uri path_uri = FileProvider.getUriForFile(this, "com.miniproj.paragchaudhari.tathastu.fileprovider" , pdf);
 
             Intent intent = new Intent(Intent.ACTION_VIEW);
 
-            intent.setDataAndType(Uri.fromFile(pdf),"application/pdf");
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
-            startActivity(intent);
+
+            intent.setDataAndType(path_uri,"application/pdf");
+            PackageManager packageManager = getPackageManager();
+            if(intent.resolveActivity(packageManager)!=null) {
+
+
+                startActivity(intent);
+            }
         }catch (Exception e1){
             Toast.makeText(this,e1.getMessage(),Toast.LENGTH_LONG).show();
         }

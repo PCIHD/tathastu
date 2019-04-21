@@ -74,30 +74,30 @@ public class CompassActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 menuItem.setChecked(true);
-                switch(menuItem.getItemId()){
-                    case R.id.nav_hall:
+                switch(menuItem.getItemId()) {
+                    case R.id.nav_hall: {
                         room = 2;
-
+                        drawerLayout.closeDrawers();
                         return true;
-                    case R.id.nav_kitchen:
+                    }
+
+
+
+                    case R.id.nav_kitchen:{
                         room = 1;
-                        return true;
-                    case R.id.nav_bedroom:
+                        drawerLayout.closeDrawers();
+                        return true;}
+                    case R.id.nav_bedroom:{
                         room = 3;
-                        return true;
-                    case R.id.nav_study_room:
+                        drawerLayout.closeDrawers();
+                        return true;}
+                    case R.id.nav_study_room:{
+                        drawerLayout.closeDrawers();
                         room = 4;
-                        return true;
-
-
-
-
-
-
-
+                    return true;}
                 }
 
-                drawerLayout.closeDrawer(GravityCompat.START);
+
                 return  true;
 
             }
@@ -216,7 +216,7 @@ public class CompassActivity extends AppCompatActivity {
             Frame currentFrame = fragment.getArSceneView().getArFrame();
             Image currentImage = currentFrame.acquireCameraImage();
             String name = generateFileName("Window");
-            //snackbarHelper.showMessageWithDismiss(this,name);
+
             process_Image(currentImage,2);
 
 
@@ -280,12 +280,18 @@ public class CompassActivity extends AppCompatActivity {
     }
 
     private void checkpermission(){
-        if(ContextCompat.checkSelfPermission(this , Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, 1);
-        }
+
             if(ContextCompat.checkSelfPermission(this , Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
 
-                ActivityCompat.requestPermissions(this,REQUIRED_PERMISSIONS,2);
+                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
+        }
+        if(ContextCompat.checkSelfPermission(this , Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
+
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CAMERA},1);
+        }
+        if(ContextCompat.checkSelfPermission(this , Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},1);
         }
     }
 

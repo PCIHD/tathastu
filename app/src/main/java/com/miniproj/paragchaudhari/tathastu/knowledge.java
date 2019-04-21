@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class knowledge extends AppCompatActivity {
 
@@ -13,79 +14,83 @@ public class knowledge extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_knowledge);
+        try {
+            setContentView(R.layout.activity_knowledge);
 
-        button9= (Button) findViewById(R.id.button9);
-        button9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openknow9();
-            }
-        });
+            button9 = (Button) findViewById(R.id.button9);
+            button9.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openknow9();
+                }
+            });
 
-        button8= (Button) findViewById(R.id.button8);
-        button8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openknow8();
-            }
-        });
+            button8 = (Button) findViewById(R.id.button8);
+            button8.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openknow8();
+                }
+            });
 
-        button7= (Button) findViewById(R.id.button7);
-        button7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openknow7();
-            }
-        });
+            button7 = (Button) findViewById(R.id.button7);
+            button7.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openknow7();
+                }
+            });
 
-        button6= (Button) findViewById(R.id.button6);
-        button6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openknow6();
-            }
-        });
+            button6 = (Button) findViewById(R.id.button6);
+            button6.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openknow6();
+                }
+            });
 
-        button5= (Button) findViewById(R.id.button5);
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openknow5();
-            }
-        });
+            button5 = (Button) findViewById(R.id.button5);
+            button5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openknow5();
+                }
+            });
 
-        button4= (Button) findViewById(R.id.button4);
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openknow4();
-            }
-        });
+            button4 = (Button) findViewById(R.id.button4);
+            button4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openknow4();
+                }
+            });
 
-        button3= (Button) findViewById(R.id.button3);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openknow3();
-            }
-        });
+            button3 = (Button) findViewById(R.id.button3);
+            button3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openknow3();
+                }
+            });
 
-        button2= (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openknow2();
-            }
-        });
+            button2 = (Button) findViewById(R.id.button2);
+            button2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openknow2();
+                }
+            });
 
-        button1=(Button) findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openknow1();
-            }
-        });
+            button1 = (Button) findViewById(R.id.button1);
+            button1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openknow1();
+                }
+            });
+        }catch (Exception e1){
+            Toast.makeText(this,e1.getMessage(),Toast.LENGTH_LONG).show();
+        }
     }
     public void openknow1(){
         Intent intent =new Intent(this,know1.class);

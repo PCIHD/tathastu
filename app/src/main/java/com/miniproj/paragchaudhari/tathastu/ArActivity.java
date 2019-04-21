@@ -102,24 +102,29 @@ public class ArActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 menuItem.setChecked(true);
                 switch(menuItem.getItemId()){
-                    case R.id.Bed_01_sfb:
+                    case R.id.Bed_01_sfb:{
                         selectedObject = Uri.parse("Bed_01.sfb");
-                        return true;
-                    case R.id.computer_table_sfb:
+                        return true;}
+                    case R.id.computer_table_sfb:{
+                        drawerLayout.closeDrawers();
                         selectedObject = Uri.parse("computer_table.sfb");
-                        return true;
-                    case R.id.dining_table_sfb:
+                        return true;}
+                    case R.id.dining_table_sfb:{
+                        drawerLayout.closeDrawers();
                         selectedObject = Uri.parse("dining_table.sfb");
-                        return true;
-                    case R.id.eb_nightstand_01_sfb:
+                        return true;}
+                    case R.id.eb_nightstand_01_sfb:{
+                        drawerLayout.closeDrawers();
                         selectedObject = Uri.parse("eb_nightstand_01.sfb");
-                        return true;
-                    case R.id.expensive_sofa_sfb:
+                        return true;}
+                    case R.id.expensive_sofa_sfb:{
+                        drawerLayout.closeDrawers();
                         selectedObject = Uri.parse("expensive_sofa.sfb");
-                        return true;
-                    case R.id.model_sfb:
+                        return true;}
+                    case R.id.model_sfb:{
+                        drawerLayout.closeDrawers();
                         selectedObject  = Uri.parse("model.sfb");
-                        return true;
+                        return true;}
 
 
 
