@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/alegreya_sans_bold_italic</item>
         <item>@font/bad_script</item>
         <item>@font/calligraffitti</item>
         <item>@font/galada</item>
         <item>@font/kalam</item>
+        <item>@font/poly_italic</item>
+        <item>@font/prociono</item>
     </array>
 </resources>

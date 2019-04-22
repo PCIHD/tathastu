@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:layout_margin="16dp"
 
-        android:fontFamily="@font/kalam"
+        android:fontFamily="@font/prociono"
         android:scrollbars="vertical"
         android:text="@string/kitchen"
         android:textColor="@android:color/background_dark"
