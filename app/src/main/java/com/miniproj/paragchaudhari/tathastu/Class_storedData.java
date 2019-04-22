@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 final public  class Class_storedData {
 
@@ -36,22 +38,28 @@ final public  class Class_storedData {
 
 
 
+
 /*
 
 FUnction getSuggestion created , add logic for the suggestion there , add necessary paramaters
 
  */
-   public Class_storedData(int obj, int room,float azimuth, Bitmap Image, String File,Context activity){
+   public Class_storedData(int obj, int room,float azimuth, Bitmap Image,Context activity){
         room_id = room;
         degree_label = azimuth;
         image_id = Image;
         object_id = obj;
-        File_name  = File;
+
         context = activity;
 
 
 
        //Toast.makeText(context,"message",Toast.LENGTH_LONG).show();
+    }
+    private String generatePdfName(String room,String object){
+        return  "Report" +room + object + new SimpleDateFormat("yyyyMMddHHmmss", java.util.Locale.getDefault()).format(new Date()) + ".pdf";
+
+
     }
 
     private static String acceptiblity(String deg){
@@ -130,6 +138,7 @@ FUnction getSuggestion created , add logic for the suggestion there , add necess
        getDescription_id();
         String directory_path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS) +"/Tathastu/";
         File file = new File(directory_path);
+        File_name = generatePdfName(room,object);
         String target = directory_path + File_name;
         File filepath = new File(target);
 
