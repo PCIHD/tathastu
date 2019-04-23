@@ -70,7 +70,7 @@ android:width="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.621"
-        tools:text="Navin" />
+        tools:text="REPORT" />
 
 
     <Button
