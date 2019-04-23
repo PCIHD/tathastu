@@ -4,17 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".Navin">
 
 
     <LinearLayout
         android:id="@+id/Report_list"
-        android:layout_width="395dp"
-        android:layout_height="587dp"
+        android:layout_width="385dp"
+        android:layout_height="549dp"
+        android:background="@color/cardview_shadow_start_color"
         android:clickable="true"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rep"
+        android:background="@drawable/button_round"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="395dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/cardview_dark_background"
+        android:fontFamily="serif-monospace"
+        android:text="ANALYSIS REPORT"
+        android:textAlignment="center"
+        android:textColor="#C0CA33"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -4,16 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:id="@+id/hall"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_hall"
             android:title="Hall"/>
+    </group>
+    <group android:id="@+id/kitchen"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_kitchen"
             android:title="Kitchen" />
+    </group>
+    <group android:id="@+id/bedroom"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_bedroom"
             android:title="Bedroom" />
+    </group>
+    <group android:id="@+id/studyroom"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_study_room"
             android:title="Study Room" />

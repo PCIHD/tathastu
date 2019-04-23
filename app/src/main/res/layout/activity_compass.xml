@@ -11,32 +11,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp" />
+        android:layout_marginBottom="-8dp" />
 
     <ImageView
         android:id="@+id/main_image_dial"
-        android:layout_width="164dp"
-        android:layout_height="100dp"
+        android:layout_width="72dp"
+        android:layout_height="74dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="247dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="329dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="576dp"
         android:contentDescription="@string/compass_dial"
         android:src="@drawable/dial" />
 
     <ImageView
         android:id="@+id/main_image_hands"
-        android:layout_width="145dp"
-        android:layout_height="103dp"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="254dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="11dp"
+        android:layout_marginStart="336dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="-150dp"
         android:contentDescription="@string/compass_hands"
         android:src="@drawable/hands" />
@@ -44,8 +45,16 @@
 
     <TextView
         android:id="@+id/sotw_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="309dp"
+        android:layout_marginBottom="616dp" />
 
     <ImageButton
         android:id="@+id/Compass_doorbutton"
@@ -59,7 +68,8 @@
         android:layout_marginTop="606dp"
         android:layout_marginEnd="17dp"
         android:layout_marginBottom="81dp"
-        android:background="@drawable/vastu_door11" />
+        android:src="@drawable/door_vastu"
+        android:background="@drawable/button_round" />
 
     <ImageButton
         android:id="@+id/Compass_windowButton"
@@ -73,18 +83,7 @@
         android:layout_marginTop="662dp"
         android:layout_marginEnd="23dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/vastu_window22" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/fragment"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="150dp"
-        android:layout_marginEnd="203dp"
-        android:layout_marginBottom="226dp"
-        tools:context="com.miniproj.paragchaudhari.tathastu.CompassActivity" />
+        android:src="@drawable/window_vastu"
+        android:background="@drawable/button_round" />
 
 </RelativeLayout>

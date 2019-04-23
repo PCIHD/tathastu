@@ -1,6 +1,16 @@
 package com.miniproj.paragchaudhari.tathastu;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.pdf.PdfDocument;
+import android.os.Environment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -53,7 +63,7 @@ public class CompassActivity extends AppCompatActivity {
     private NavigationView navigationView;
 
 
-
+private String room1;
     private static final String TAG = "CompassActivity";
 
     private Compass compass;
@@ -67,9 +77,12 @@ public class CompassActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_listcompass);
         checkpermission();
         InitializeDrawer();
+
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -77,6 +90,8 @@ public class CompassActivity extends AppCompatActivity {
                 switch(menuItem.getItemId()) {
                     case R.id.nav_hall: {
                         room = 2;
+                        room1="HALL ANALYSIS";
+
                         drawerLayout.closeDrawers();
                         return true;
                     }
@@ -85,15 +100,21 @@ public class CompassActivity extends AppCompatActivity {
 
                     case R.id.nav_kitchen:{
                         room = 1;
+
+                        room1="KITCHEN ANALYSIS";
                         drawerLayout.closeDrawers();
                         return true;}
                     case R.id.nav_bedroom:{
                         room = 3;
+
+                        room1="BEDROOM ANALYSIS";
                         drawerLayout.closeDrawers();
                         return true;}
                     case R.id.nav_study_room:{
                         drawerLayout.closeDrawers();
                         room = 4;
+                        room1="STUDYROOM ANALYSIS";
+
                     return true;}
                 }
 

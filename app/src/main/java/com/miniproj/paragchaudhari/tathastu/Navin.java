@@ -19,6 +19,7 @@ public class Navin extends AppCompatActivity {
 
     private String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS) + "/Tathastu/";
     private LinearLayout navigationView;
+    private Button button_report;
     private Context context = this;
 
 
@@ -34,7 +35,7 @@ public class Navin extends AppCompatActivity {
         populate_list();
 
 
-
+button_report=(Button)findViewById(R.id.rep);
     }
 
     private void populate_list() {
@@ -44,7 +45,7 @@ public class Navin extends AppCompatActivity {
             File Tathsatu_directory = new File(path);
             File[] files = Tathsatu_directory.listFiles();
             for (int i = 0; i < files.length; i++) {
-                Button button_report = new Button(this);
+                button_report = new Button(this);
                 String name = files[i].getAbsolutePath();
                 button_report.setText(files[i].getName());
                 navigationView.addView(button_report);

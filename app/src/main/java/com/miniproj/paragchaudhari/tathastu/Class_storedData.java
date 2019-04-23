@@ -30,7 +30,7 @@ final public  class Class_storedData {
     private String room ,object,File_name;
 
     private Context context;
-    private TextView  room_textview,acceptiblity_textview,acceptiblity_textview1,acceptibility_textview2,suggestion_textview;
+    private TextView  room_textview,room_textview1,acceptiblity_textview,acceptiblity_textview1,acceptibility_textview2,suggestion_textview;
     private ImageView object_image;
     PdfDocument report = new PdfDocument();
 
