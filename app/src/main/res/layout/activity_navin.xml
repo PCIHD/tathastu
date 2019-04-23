@@ -20,12 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></LinearLayout>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/rep"
-        android:background="@drawable/button_round"/>
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="395dp"
@@ -43,4 +37,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rep"
+        android:background="@drawable/button_round"/>
+
+
 </android.support.constraint.ConstraintLayout>

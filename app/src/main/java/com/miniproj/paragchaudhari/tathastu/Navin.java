@@ -3,6 +3,8 @@ package com.miniproj.paragchaudhari.tathastu;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -35,7 +37,7 @@ public class Navin extends AppCompatActivity {
         populate_list();
 
 
-button_report=(Button)findViewById(R.id.rep);
+
     }
 
     private void populate_list() {
@@ -46,6 +48,9 @@ button_report=(Button)findViewById(R.id.rep);
             File[] files = Tathsatu_directory.listFiles();
             for (int i = 0; i < files.length; i++) {
                 button_report = new Button(this);
+              //  button_report.setBackgroundColor(Color.MAGENTA);
+                button_report.setBackground(getDrawable(R.drawable.button_round1));
+
                 String name = files[i].getAbsolutePath();
                 button_report.setText(files[i].getName());
                 navigationView.addView(button_report);
